@@ -7,7 +7,7 @@
 
 		<p>A student in computer science at ESIR in France.</p>
 		<div>
-			<a class="link" target="_blank" href="https://www.linkedin.com/in/maelkerichard/">
+			<a rel='noopener' class="link" target="_blank" href="https://www.linkedin.com/in/maelkerichard/">
 				<svg
 					width="33"
 					height="33"
@@ -15,12 +15,13 @@
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
 				>
+					<title>Linkedin</title>
 					<path
 						d="M26.125 0H6.875C3.07863 0 0 3.07863 0 6.875V26.125C0 29.9214 3.07863 33 6.875 33H26.125C29.9228 33 33 29.9214 33 26.125V6.875C33 3.07863 29.9228 0 26.125 0ZM11 26.125H6.875V11H11V26.125ZM8.9375 9.2565C7.60925 9.2565 6.53125 8.17025 6.53125 6.831C6.53125 5.49175 7.60925 4.4055 8.9375 4.4055C10.2658 4.4055 11.3438 5.49175 11.3438 6.831C11.3438 8.17025 10.2671 9.2565 8.9375 9.2565ZM27.5 26.125H23.375V18.4195C23.375 13.7885 17.875 14.1391 17.875 18.4195V26.125H13.75V11H17.875V13.4269C19.7945 9.87113 27.5 9.6085 27.5 16.8314V26.125Z"
 					/>
 				</svg>
 			</a>
-			<a class="link" target="_blank" href="https://github.com/Pixselve">
+			<a rel='noopener' class="link" target="_blank" href="https://github.com/Pixselve">
 				<svg
 					width="34"
 					height="34"
@@ -28,6 +29,7 @@
 					fill="none"
 					xmlns="http://www.w3.org/2000/svg"
 				>
+					<title>Github</title>
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
@@ -68,10 +70,10 @@
 </svelte:head>
 
 <style lang="scss">
-	$black: #494951;
-	$gray: #7a7a86;
-	$blue: #034687;
-	$red: #e10032;
+  $black: #494951;
+  $gray: #7a7a86;
+  $blue: #034687;
+  $red: #e10032;
 
 	.main-grid {
 		height: 100vh;
