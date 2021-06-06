@@ -1,28 +1,33 @@
-<script>
-	import Blobs from '../lib/Blobs.svelte';
-</script>
-<div>
-
-</div>
-
-<div class='main-grid'>
-	<div class='text'>
+<div class="main-grid">
+	<div class="text">
 		<main>
 			<h1>Bonjour !</h1>
-			<h1>I am <span class='emphasis'>Mael Kerichard</span>.</h1>
+			<h1>I am <span class="emphasis">Mael Kerichard</span>.</h1>
 		</main>
 
 		<p>A student in computer science at ESIR in France.</p>
 		<div>
-			<a class='link' target='_blank' href="https://www.linkedin.com/in/maelkerichard/">
-				<svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<a class="link" target="_blank" href="https://www.linkedin.com/in/maelkerichard/">
+				<svg
+					width="33"
+					height="33"
+					viewBox="0 0 33 33"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
 					<path
 						d="M26.125 0H6.875C3.07863 0 0 3.07863 0 6.875V26.125C0 29.9214 3.07863 33 6.875 33H26.125C29.9228 33 33 29.9214 33 26.125V6.875C33 3.07863 29.9228 0 26.125 0ZM11 26.125H6.875V11H11V26.125ZM8.9375 9.2565C7.60925 9.2565 6.53125 8.17025 6.53125 6.831C6.53125 5.49175 7.60925 4.4055 8.9375 4.4055C10.2658 4.4055 11.3438 5.49175 11.3438 6.831C11.3438 8.17025 10.2671 9.2565 8.9375 9.2565ZM27.5 26.125H23.375V18.4195C23.375 13.7885 17.875 14.1391 17.875 18.4195V26.125H13.75V11H17.875V13.4269C19.7945 9.87113 27.5 9.6085 27.5 16.8314V26.125Z"
 					/>
 				</svg>
 			</a>
-			<a class='link' target='_blank' href="https://github.com/Pixselve">
-				<svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<a class="link" target="_blank" href="https://github.com/Pixselve">
+				<svg
+					width="34"
+					height="34"
+					viewBox="0 0 34 34"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
 					<path
 						fill-rule="evenodd"
 						clip-rule="evenodd"
@@ -32,29 +37,41 @@
 			</a>
 		</div>
 	</div>
-	<div class='avatar-blobs'>
-		<img src='avatar.png' alt='Me'>
+	<div class="avatar-blobs">
+		<img src="avatar.png" alt="Me" />
 
 		<svg viewBox="0 0 503 375" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M33.853 36.1125C42.8276 35.4529 51.8332 37.6475 58.3038 43.9312C66.0215 51.4258 72.181 61.3033 70.8074 71.9991C69.2907 83.8089 61.6256 94.0473 51.1521 99.6188C40.1692 105.461 26.6377 107.314 15.7555 101.284C5.39048 95.5412 0.509652 83.1672 0.0160995 71.2841C-0.385838 61.6068 6.81047 54.1869 13.5101 47.223C19.1537 41.3567 25.7546 36.7076 33.853 36.1125Z" fill="#DBE8E1"/>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M183.571 52.0023C213.576 52.0722 243.171 57.5133 268.814 73.1018C296.156 89.7236 318.348 113.285 332.002 142.235C347.122 174.295 363.796 211.975 349.635 244.471C335.597 276.685 290.919 278.555 263.193 300.131C233.96 322.881 220.004 367.052 183.571 373.705C146.122 380.544 107.765 359.282 79.6023 333.658C53.1184 309.561 38.1054 274.414 35.2095 238.716C32.6747 207.469 53.7613 181.214 64.8573 151.895C75.2422 124.455 75.5953 91.5893 98.039 72.7038C121.051 53.3401 153.502 51.9322 183.571 52.0023Z" fill="#034687"/>
-			<path fill-rule="evenodd" clip-rule="evenodd" d="M296.655 1.77621C339.925 1.46165 386.02 -7.06499 422.461 16.2542C459.764 40.1244 478.449 83.7433 491.059 126.178C503.405 167.723 509.458 212.981 492.814 253C476.792 291.525 440.02 316.013 403.617 336.433C370.774 354.856 334.026 367.711 296.655 363.033C261.812 358.672 238.258 328.885 207.536 311.889C170.635 291.475 117.541 291.308 98.7696 253.561C79.9276 215.672 105.082 171.582 117.673 131.186C130.439 90.2299 137.394 43.2182 172.171 18.0737C206.927 -7.05635 253.757 2.08805 296.655 1.77621Z" fill="#E10032"/>
+			<path
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M33.853 36.1125C42.8276 35.4529 51.8332 37.6475 58.3038 43.9312C66.0215 51.4258 72.181 61.3033 70.8074 71.9991C69.2907 83.8089 61.6256 94.0473 51.1521 99.6188C40.1692 105.461 26.6377 107.314 15.7555 101.284C5.39048 95.5412 0.509652 83.1672 0.0160995 71.2841C-0.385838 61.6068 6.81047 54.1869 13.5101 47.223C19.1537 41.3567 25.7546 36.7076 33.853 36.1125Z"
+				fill="#DBE8E1"
+			/>
+			<path
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M183.571 52.0023C213.576 52.0722 243.171 57.5133 268.814 73.1018C296.156 89.7236 318.348 113.285 332.002 142.235C347.122 174.295 363.796 211.975 349.635 244.471C335.597 276.685 290.919 278.555 263.193 300.131C233.96 322.881 220.004 367.052 183.571 373.705C146.122 380.544 107.765 359.282 79.6023 333.658C53.1184 309.561 38.1054 274.414 35.2095 238.716C32.6747 207.469 53.7613 181.214 64.8573 151.895C75.2422 124.455 75.5953 91.5893 98.039 72.7038C121.051 53.3401 153.502 51.9322 183.571 52.0023Z"
+				fill="#034687"
+			/>
+			<path
+				fill-rule="evenodd"
+				clip-rule="evenodd"
+				d="M296.655 1.77621C339.925 1.46165 386.02 -7.06499 422.461 16.2542C459.764 40.1244 478.449 83.7433 491.059 126.178C503.405 167.723 509.458 212.981 492.814 253C476.792 291.525 440.02 316.013 403.617 336.433C370.774 354.856 334.026 367.711 296.655 363.033C261.812 358.672 238.258 328.885 207.536 311.889C170.635 291.475 117.541 291.308 98.7696 253.561C79.9276 215.672 105.082 171.582 117.673 131.186C130.439 90.2299 137.394 43.2182 172.171 18.0737C206.927 -7.05635 253.757 2.08805 296.655 1.77621Z"
+				fill="#E10032"
+			/>
 		</svg>
-
-
 	</div>
-
 </div>
 
 <svelte:head>
 	<title>Mael Kerichard</title>
 </svelte:head>
 
-<style lang='scss'>
+<style lang="scss">
 	$black: #494951;
 	$gray: #7a7a86;
 	$blue: #034687;
-	$red: #E10032;
+	$red: #e10032;
 
 	.main-grid {
 		height: 100vh;
@@ -62,14 +79,14 @@
 		color: $black;
 		justify-content: space-around;
 		align-items: center;
-    font-family: 'Roboto', sans-serif;
+		font-family: 'Roboto', sans-serif;
 		font-size: 1.5rem;
 		padding: 20px;
-		@media screen and (max-width: 1122px){
+		@media screen and (max-width: 1122px) {
 			flex-direction: column;
 			justify-content: center;
-      .avatar-blobs {
-        order: 0;
+			.avatar-blobs {
+				order: 0;
 				margin-bottom: 3rem;
 				svg {
 					width: 100% !important;
@@ -78,7 +95,7 @@
 			.text {
 				order: 1;
 			}
-    }
+		}
 		.link {
 			margin-right: 1rem;
 			path {
@@ -86,9 +103,9 @@
 				transition: fill 100ms ease-in-out;
 			}
 			&:hover {
-        path {
-          fill: lighten($blue, 10%);
-        }
+				path {
+					fill: lighten($blue, 10%);
+				}
 			}
 		}
 		h1 {
@@ -98,7 +115,7 @@
 			color: $gray;
 		}
 		.emphasis {
-      color: $blue;
+			color: $blue;
 		}
 
 		.avatar-blobs {
