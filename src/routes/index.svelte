@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+	export const prerender = true;
+</script>
+
 <div class="main-grid">
 	<div class="text">
 		<main>
@@ -7,7 +11,12 @@
 
 		<p>A student in computer science at ESIR in France.</p>
 		<div>
-			<a rel='noopener' class="link" target="_blank" href="https://www.linkedin.com/in/maelkerichard/">
+			<a
+				rel="noopener"
+				class="link"
+				target="_blank"
+				href="https://www.linkedin.com/in/maelkerichard/"
+			>
 				<svg
 					width="33"
 					height="33"
@@ -21,7 +30,7 @@
 					/>
 				</svg>
 			</a>
-			<a rel='noopener' class="link" target="_blank" href="https://github.com/Pixselve">
+			<a rel="noopener" class="link" target="_blank" href="https://github.com/Pixselve">
 				<svg
 					width="34"
 					height="34"
@@ -70,10 +79,10 @@
 </svelte:head>
 
 <style lang="scss">
-  $black: #494951;
-  $gray: #7a7a86;
-  $blue: #034687;
-  $red: #e10032;
+	$black: #494951;
+	$gray: #7a7a86;
+	$blue: #034687;
+	$red: #e10032;
 
 	.main-grid {
 		height: 100vh;
