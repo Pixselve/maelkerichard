@@ -2,6 +2,10 @@
 	export const prerender = true;
 </script>
 
+<script lang="ts">
+	import ProjectCard from '../lib/ProjectCard.svelte';
+</script>
+
 <div class="main-grid">
 	<div class="text">
 		<main>
@@ -73,6 +77,27 @@
 		</svg>
 	</div>
 </div>
+<h1 class='section-title'>Featured projects</h1>
+<ProjectCard
+	bgColor="#FFD0D0"
+	imgSrc="/kontrakt/screenshot.png"
+	url="https://kontrakt.maelkerichard.com"
+	github="https://github.com/Pixselve/kontrakt-web"
+>
+	<h1 slot="title">Kontrakt</h1>
+	<p slot="description">A complete set of tools to manage your classroom contracts.</p>
+</ProjectCard>
+
+<ProjectCard
+	right
+	bgColor="#BCF8BE"
+	imgSrc="/renergie/img.png"
+	url="https://renergie.ml"
+	github="https://github.com/Renergie-app"
+>
+	<h1 slot="title">Renergie</h1>
+	<p slot="description">Make the right decision for the future.</p>
+</ProjectCard>
 
 <svelte:head>
 	<title>Mael Kerichard</title>
@@ -84,15 +109,20 @@
 	$blue: #034687;
 	$red: #e10032;
 
+	.section-title {
+		font-size: 4rem;
+		color: var(--main-black);
+	}
+
 	.main-grid {
 		height: 100vh;
 		display: flex;
 		color: $black;
 		justify-content: space-around;
 		align-items: center;
-		font-family: 'Roboto', sans-serif;
+
 		font-size: 1.5rem;
-		padding: 20px;
+
 		@media screen and (max-width: 1122px) {
 			flex-direction: column;
 			justify-content: center;
