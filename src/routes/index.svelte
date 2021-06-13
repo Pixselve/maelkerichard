@@ -163,15 +163,19 @@
 			display: flex;
 			position: relative;
 			justify-content: center;
-
+      width: 30rem;
+      @media screen and (max-width: 1122px) {
+				width: 50%;
+      }
 			svg {
-				width: 30rem;
+				width: 100%;
+				height: 100%;
 			}
 			img {
 				position: absolute;
 				height: 80%;
+				justify-self: baseline;
 				top: 10%;
-				right: 20%;
 			}
 		}
 	}

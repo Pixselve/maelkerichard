@@ -75,7 +75,7 @@
 		.spacer {
 			order: 0;
 			flex-grow: 1;
-      @media screen and (max-width: 1414px) {
+      @media screen and (max-width: 1024px) {
         display: none;
       }
 		}
@@ -94,7 +94,7 @@
 		height: 100%;
 		right: 0;
 		top: 0;
-		@media screen and (max-width: 1414px) {
+		@media screen and (max-width: 1024px) {
 			display: none;
     }
 	}
