@@ -1,15 +1,8 @@
 <script>
-	import '../global.scss';
+	import '../app.css';
 </script>
 
-<main>
+<main class='xl:max-w-7xl p-7 mt-0 xl:mt-40 m-auto space-y-20 text-gray-800'>
 	<slot />
 </main>
 
-<style lang="scss">
-	main {
-		padding: 20px;
-		max-width: 1700px;
-		margin: auto;
-	}
-</style>
