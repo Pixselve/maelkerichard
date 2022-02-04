@@ -1,0 +1,14 @@
+{
+  "background_color": "#ffffff",
+  "description": "Bonjour ! My name is Mael, I'm a French student in computer science.",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "www.maelkerichard",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "www.maelkerichard",
+  "start_url": "/",
+  "theme_color": "#034687",
+  "icons": [
+  ]
+}
