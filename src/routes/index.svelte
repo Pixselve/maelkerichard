@@ -3,6 +3,11 @@ import FranceFlag from '../lib/icons/FranceFlag.svelte';
 import ProjectCard from '$lib/ProjectCard.svelte';
 </script>
 
+<script context="module">
+export const hydrate = false;
+export const router = false;
+</script>
+
 
 <header class='space-y-10'>
 	<h1 class='text-4xl sm:text-5xl md:text-7xl xl:text-8xl font-bold leading-relaxed text-gray-900'>
@@ -29,7 +34,7 @@ import ProjectCard from '$lib/ProjectCard.svelte';
 		<ProjectCard
 			title='Renergie'
 			imageURL='renergie-logo.svg'
-			websiteURL='https://renergie.ml'
+			websiteURL='https://aa879ef8.web-f5y5.pages.dev'
 			githubURL='https://github.com/Renergie-app'
 			description='A project for the "TIPE", a common test for most of the admission exams to the scientific Grandes Ecoles. Kontrakt allow users to perform simulations for energy renovation.' />
 
