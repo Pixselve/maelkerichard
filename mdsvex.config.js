@@ -8,7 +8,7 @@ const config = defineConfig({
 	},
 
 	layout: {
-		_: "src/routes/blog/_blog.layout.svelte"
+		_: 'src/routes/blog/_blog.layout.svelte'
 	},
 
 	remarkPlugins: [],

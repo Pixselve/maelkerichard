@@ -1,11 +1,19 @@
+let plugin = require('tailwindcss/plugin')
+
 const config = {
-	content: ['./src/**/*.{html,js,svelte,ts}'],
+	content: ['./src/**/*.{html,js,svelte,ts}', '/*.js'],
 
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				primary: "#2563EB"
+			}
+		}
 	},
 
-	plugins: []
+	plugins: [
+		require('@tailwindcss/typography')
+	]
 };
 
 module.exports = config;
