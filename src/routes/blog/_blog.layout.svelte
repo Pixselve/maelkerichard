@@ -2,6 +2,7 @@
 export let title;
 export let description;
 export let dateCreated;
+export let photoPath;
 </script>
 
 <svelte:head>
@@ -23,7 +24,7 @@ export let dateCreated;
 		property='og:description'
 		content={description}
 	/>
-	<meta property='og:image' content='' />
+	<meta property='og:image' content={photoPath} />
 
 	<!-- Twitter -->
 	<meta property='twitter:card' content='summary_large_image' />
@@ -33,7 +34,7 @@ export let dateCreated;
 		property='twitter:description'
 		content={description}
 	/>
-	<meta property='twitter:image' content='' />
+	<meta property='twitter:image' content={photoPath} />
 
 </svelte:head>
 
