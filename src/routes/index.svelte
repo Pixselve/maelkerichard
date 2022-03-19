@@ -50,8 +50,7 @@ export const router = false;
 			French student in computer science.
 		</h1>
 
-		<h2 class='text-2xl text-gray-600 leading-relaxed'>I love new technologies and start all my days with a dose of tech
-			news. The people who love cats, I am in their group.</h2>
+		<h2 class='text-2xl text-gray-600 leading-relaxed'>I love new technologies and start all my days with a dose of tech news.</h2>
 	</header>
 
 
