@@ -1,14 +1,17 @@
 ---
-title: Everyone just loves the tartness of chickpeas smoothie garnishd with thyme.
+title: This is my first test article
 dateCreated: 2022-03-19
-description: Triticum rusticus hibrida est.
+description: Just a test article with a beautiful photo from unplash
 photoPath: /articlesPictures/tijana-drndarski-Bb8_yBkb_6E-unsplash.jpg
 ---
 
-# Create a new blog
+# This is an H1 title
+## This is an H2 title
+### This is an H3 title
+#### This is an H4 title
+
 
 ```js
-let v = 0;
+let someCodeInJavascript = true;
 ```
-
-# Hey 
+![](/articlesPictures/tijana-drndarski-Bb8_yBkb_6E-unsplash.jpg)
