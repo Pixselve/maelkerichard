@@ -3,6 +3,8 @@ export let title;
 export let description;
 export let dateCreated;
 export let photoPath;
+
+import Image from "svelte-image"
 </script>
 
 <svelte:head>
@@ -39,7 +41,7 @@ export let photoPath;
 </svelte:head>
 
 <header class='mb-20 space-y-20'>
-	<img class='w-full h-60 object-cover rounded-lg' src={photoPath} alt=''>
+	<Image class='w-full h-60 object-cover rounded-lg' src={photoPath} alt=''/>
 	<div>
 		<div class='text-black/50 font-bold'>
 			Mael Kerichard • <span>{new Date(dateCreated).toLocaleDateString("en-US", {

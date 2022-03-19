@@ -30,20 +30,26 @@ export let firstArticle;
 <main class='space-y-20'>
 	<h1 class='font-bold text-5xl'>Articles</h1>
 
-	<section>
-		<a href={"blog/"+ firstArticle.path} class='grid sm:grid-cols-2 sm:gap-10 gap-2 block'>
-			<img class='rounded-xl w-full' src={firstArticle.photoPath} alt='Article photo'>
-			<div class='space-y-5'>
-				<div class='text-black/50 font-medium'>{new Date(firstArticle.dateCreated).toLocaleDateString("en-US", {
-					day: "numeric",
-					month: "long",
-					year: "numeric"
-				})}</div>
-				<div class='lg:text-5xl font-medium text-2xl'>{firstArticle.title}</div>
-				<div>{firstArticle.description}</div>
-			</div>
-		</a>
-	</section>
+	{#if firstArticle !== undefined}
+		<section>
+			<a href={"blog/"+ firstArticle.path} class='grid sm:grid-cols-2 sm:gap-10 gap-2 block'>
+				<img class='rounded-xl w-full' src={firstArticle.photoPath} alt='Article photo'>
+				<div class='space-y-5'>
+					<div class='text-black/50 font-medium'>{new Date(firstArticle.dateCreated).toLocaleDateString("en-US", {
+						day: "numeric",
+						month: "long",
+						year: "numeric"
+					})}</div>
+					<div class='lg:text-5xl font-medium text-2xl'>{firstArticle.title}</div>
+					<div>{firstArticle.description}</div>
+				</div>
+			</a>
+		</section>
+		{:else}
+		<div class='text-4xl'>🧑‍💻 There is not any post for now. Please come back soon.</div>
+		{/if}
+
+
 
 	<section class='grid sm:grid-cols-2 lg:grid-cols-3 gap-10'>
 		{#each articles as article}
