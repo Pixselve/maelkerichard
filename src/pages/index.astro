@@ -3,12 +3,27 @@ import BaseHead from '../components/BaseHead.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 import { Image } from '@astrojs/image/components';
 import maelImage from '../assets/Mael.png';
+import { Schema } from "astro-seo-schema"
 ---
 
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image="/placeholder-social.png" />
+		<Schema
+		item={{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			name: "Mael Kerichard",
+			url: "https://mael.app",
+			gender: "male",
+			alumniOf: {
+				"@type": "CollegeOrUniversity",
+				name: "École supérieure d'ingénieurs de Rennes (ESIR)",
+			},
+			knowsAbout: ["Compilers", "Computer Science"],
+		}}
+	/>
 	</head>
 	<body class="flex h-screen items-center xl:max-w-6xl m-auto bg-slate-900 xl:space-x-20 justify-center flex-col xl:flex-row p-4">
 		<div class="space-y-10">
