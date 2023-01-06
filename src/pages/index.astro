@@ -10,7 +10,7 @@ import maelImage from '../assets/Mael.png';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} image="/placeholder-social.png" />
 	</head>
-	<body class="flex h-screen items-center max-w-6xl m-auto bg-slate-900 space-x-20 justify-center">
+	<body class="flex h-screen items-center xl:max-w-6xl m-auto bg-slate-900 xl:space-x-20 justify-center flex-col xl:flex-row p-4">
 		<div class="space-y-10">
 			<div class="bg-blue-600 p-2 rounded-md inline-block text-slate-50 font-bold">👋 Hi There! I'm Mael</div>
 			<h1 class="text-5xl text-slate-50 font-bold">A 🇫🇷 french student enrolled in an engineering degree in computer science.</h1>
@@ -20,6 +20,6 @@ import maelImage from '../assets/Mael.png';
 				<!-- <a class="text-slate-50 uppercase font-bold hover:text-blue-600" href="/projects">📃 Projects</a> -->
 			</div>
 		</div>
-		<Image format="webp" aspectRatio="1393:1549" width="300" fit="contain" src={maelImage} alt="Mael"></Image>
+		<Image class="order-first xl:order-last mb-10" format="webp" aspectRatio="1393:1549" width="300" fit="contain" src={maelImage} alt="Mael"></Image>
 	</body>
 </html>
