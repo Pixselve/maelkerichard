@@ -21,8 +21,10 @@
 			</p>
 		</div>
 		<img
-			class="order-first xl:order-last mb-10 w-1/3"
+			class="order-first xl:order-last mb-10"
 			srcset={logo}
+			height='300'
+			width='300'
 			type="image/webp"
 			alt="Mael"
 		/>
