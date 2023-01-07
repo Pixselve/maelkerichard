@@ -4,29 +4,23 @@
 </script>
 
 <svelte:head>
-  <SvelteSeo title="Mael Kerichard"
-             description="A french student enrolled in an engineering degree in computer science."
-             openGraph={{
-               title: 'Mael Kerichard',
-              description: 'A french student enrolled in an engineering degree in computer science.',
-              url: 'https://mael.app',
-              type: 'website',
-              images: [
-                  {
-                    url: 'https://mael.app/social.png',
-                    width: 2388,
-                    height: 720,
-                    alt: 'Mael Kerichard'
-                  }
-     ]
-             }}
-             twitter={{
-              site: "@Pixselve",
-              title: "Mael Kerichard",
-              description: "A french student enrolled in an engineering degree in computer science.",
-              url: 'https://mael.app/social.png',
-              alt: 'Mael Kerichard'
-  }}
+  <meta name="description" content="A french student enrolled in an engineering degree in computer science.">
+
+  <meta property="og:url" content="https://mael.app">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mael Kerichard">
+  <meta property="og:description" content="A french student enrolled in an engineering degree in computer science.">
+  <meta property="og:image" content="https://mael.app/social.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="mael.app">
+  <meta property="twitter:url" content="https://mael.app">
+  <meta name="twitter:title" content="Mael Kerichard">
+  <meta name="twitter:description" content="A french student enrolled in an engineering degree in computer science.">
+  <meta name="twitter:image" content="https://mael.app/social.png">
+
+  <SvelteSeo
+
              jsonLd={{
                    '@type': 'Person',
                     name: 'Mael Kerichard',

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import logo from '$lib/assets/mael.png';
+	import logo from '$lib/assets/mael.png?w=300;400;500&format=webp&srcset';
 </script>
 
 <svelte:head>
@@ -7,7 +7,7 @@
 </svelte:head>
 
 <div class="h-full flex-grow flex justify-center bg-slate-900 p-4">
-	<div class="xl:max-w-6xl m-auto xl:space-x-20 flex-col xl:flex-row items-center   flex">
+	<div class="xl:max-w-6xl m-auto xl:space-x-20 flex-col xl:flex-row items-center flex">
 		<div class="space-y-10">
 			<div class="bg-blue-600 p-2 rounded-md inline-block text-slate-50 font-bold">
 				👋 Hi There! I'm Mael
@@ -22,10 +22,8 @@
 		</div>
 		<img
 			class="order-first xl:order-last mb-10 w-1/3"
-			format="webp"
-			aspectRatio="1393:1549"
-			fit="contain"
-			src={logo}
+			srcset={logo}
+			type="image/webp"
 			alt="Mael"
 		/>
 	</div>
