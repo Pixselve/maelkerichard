@@ -3,7 +3,7 @@ export async function getContributionGraph() {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization: 'Bearer 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'
+			Authorization: `Bearer ${process.env.GITHUB_TOKEN}`
 		},
 		body: JSON.stringify({
 			query: `
