@@ -27,9 +27,11 @@ export async function getContributionGraph() {
 	};
 	try {
 		const response = await fetch('https://api.github.com/graphql', options);
+		if (!response.ok) throw new Error('Failed to fetch');
 		return await response.json();
 	} catch (e) {
 		// fallback to static data
+		console.warn('Failed to fetch contribution graph data, using static data instead');
 		return contributionGraphData;
 	}
 }
