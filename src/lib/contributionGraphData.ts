@@ -1,9 +1,11 @@
-export async function getContributionGraph(token: string) {
+import { GITHUB_TOKEN } from '$env/static/private'
+
+export async function getContributionGraph() {
 	const options = {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			Authorization: `Bearer ${token}`
+			Authorization: `Bearer ${GITHUB_TOKEN}`
 		},
 		body: JSON.stringify({
 			query: `
