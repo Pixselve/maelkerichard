@@ -1,4 +1,4 @@
-import preprocess from "svelte-preprocess";
+import preprocess from 'svelte-preprocess';
 import adapter from '@sveltejs/adapter-cloudflare';
 import { vitePreprocess } from '@sveltejs/kit/vite';
 
@@ -6,12 +6,23 @@ import { vitePreprocess } from '@sveltejs/kit/vite';
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(), preprocess({
-        postcss: true
-    })],
+	preprocess: [
+		vitePreprocess(),
+		preprocess({
+			postcss: true
+		})
+	],
 
 	kit: {
 		adapter: adapter()
+	},
+	csp: {
+		directives: {
+			'script-src': ["'self'"]
+		},
+		reportOnly: {
+			'script-src': ["'self'"]
+		}
 	}
 };
 
