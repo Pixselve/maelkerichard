@@ -14,14 +14,12 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter()
-	},
-	csp: {
-		directives: {
-			'script-src': ["'self'"]
-		},
-		reportOnly: {
-			'script-src': ["'self'"]
+		adapter: adapter(),
+		csp: {
+			mode: 'auto',
+			directives: {
+				'script-src': ['self']
+			}
 		}
 	}
 };
