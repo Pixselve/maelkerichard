@@ -3,10 +3,9 @@ import '../app.postcss';
 import { JsonLd, MetaTags } from 'svelte-meta-tags';
 </script>
 
-<svelte:head>
-	<MetaTags canonical='https://www.mael.app'
-						description='A french student enrolled in an engineering degree in computer science.'
-						openGraph={{
+<MetaTags canonical='https://www.mael.app'
+					description='A french student enrolled in an engineering degree in computer science.'
+					openGraph={{
     type: 'website',
     url: 'https://mael.app',
     title: 'Mael Kerichard',
@@ -20,7 +19,7 @@ import { JsonLd, MetaTags } from 'svelte-meta-tags';
       },
     ]
   }}
-						twitter='{{
+					twitter='{{
 							site: "@pixselve",
 							card: "summary_large_image",
 							title: "Mael Kerichard",
@@ -29,7 +28,7 @@ import { JsonLd, MetaTags } from 'svelte-meta-tags';
 							imageAlt: "Mael Kerichard",
 							handle: "@pixselve"
 						}}'></MetaTags>
-	<JsonLd schema={{
+<JsonLd schema={{
 	                   '@type': 'Person',
 	                    name: 'Mael Kerichard',
 	                    url: 'https://mael.app',
@@ -53,7 +52,6 @@ import { JsonLd, MetaTags } from 'svelte-meta-tags';
 
 
 	}}></JsonLd>
-</svelte:head>
 
 <main class='min-h-screen bg-slate-900 flex flex-col'>
 	<nav class='text-slate-50 p-4'>
