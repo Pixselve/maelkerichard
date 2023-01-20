@@ -13,7 +13,6 @@ specifiers:
   svelte-check: ^2.9.2
   svelte-meta-tags: ^2.6.4
   svelte-preprocess: ^4.10.7
-  svelte-seo: ^1.4.1
   tailwindcss: ^3.1.5
   tslib: ^2.4.1
   typescript: ^4.9.3
@@ -33,7 +32,6 @@ devDependencies:
   svelte-check: 2.10.3_3ucmcy6nc66kxr6c6xf65o2ygq
   svelte-meta-tags: 2.6.4_niwyv7xychq2ag6arq5eqxbomm
   svelte-preprocess: 4.10.7_sszq2jtn34a6yxhgyttnzzfolm
-  svelte-seo: 1.4.1_typescript@4.9.4
   tailwindcss: 3.2.4_postcss@8.4.21
   tslib: 2.4.1
   typescript: 4.9.4
@@ -1273,14 +1271,6 @@ packages:
       rimraf: 2.7.1
     dev: true
 
-  /schema-dts/0.8.3_typescript@4.9.4:
-    resolution: { integrity: sha512-GSLeVkUgEe8DzS8/FGWou1wlC8tQ1KXA5amCqCIH/psUzF74fWswtT0QFlSoJLT08CYyixnc3S/lkAm+RExoLQ== }
-    peerDependencies:
-      typescript: '>=3.4.0'
-    dependencies:
-      typescript: 4.9.4
-    dev: true
-
   /schema-dts/1.1.0_typescript@4.9.4:
     resolution: { integrity: sha512-vdmbs/5ycj4zyKpZIDqTcy+IZi4s7c38RVAYuDmRi7zgxUT8wRWPMLzg0jr7FjdVunYu9yZ00F3+XcZTTFcTOQ== }
     peerDependencies:
@@ -1490,14 +1480,6 @@ packages:
       strip-indent: 3.0.0
       svelte: 3.55.0
       typescript: 4.9.4
-    dev: true
-
-  /svelte-seo/1.4.1_typescript@4.9.4:
-    resolution: {integrity: sha512-ud0vdQrAVvZHLFsYznimlKdxWC47GqYWgOBBTr3mYDPouBPQHYDazEFredmwUm5boVoMRffu/aOJ5Yj1xQQibA==}
-    dependencies:
-      schema-dts: 0.8.3_typescript@4.9.4
-    transitivePeerDependencies:
-      - typescript
     dev: true
 
   /svelte/3.55.0:
