@@ -10,17 +10,17 @@
     </ul>
   </header>
   <p itemprop="abstract">{project.description}</p>
-  <div class="flex space-x-2">
+  <div class='flex space-x-2 flex-wrap'>
     {#each project.tags as tag}
-      <div class="text-sm bg-blue-500/20 px-1 p-0.5 rounded-md">{tag}</div>
+      <div class='inline text-sm bg-blue-500/20 px-1 p-0.5 rounded-md'>{tag}</div>
     {/each}
   </div>
 </div>
 
 <script lang="ts">
-  import type { ProjectType } from "../routes/projects/projects";
+import type { ProjectType } from '../routes/projects/projects';
 
-  export let project: ProjectType;
+export let project: ProjectType;
 </script>
 
 <style>
