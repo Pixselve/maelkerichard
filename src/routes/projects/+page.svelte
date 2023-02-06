@@ -2,6 +2,8 @@
 
 import Project from '$lib/Project.svelte';
 import { projects } from './projects';
+import MetaTags from '$lib/MetaTags.svelte';
+
 export let data;
 
 const maxContributions = data.contributionGraph.data.user.contributionsCollection.contributionCalendar.weeks.reduce((acc, week) => {
@@ -14,9 +16,9 @@ const maxContributions = data.contributionGraph.data.user.contributionsCollectio
 
 </script>
 
-<svelte:head>
-	<title>Projects - Mael Kerichard</title>
-</svelte:head>
+<MetaTags canonical='https://mael.app/projects'
+					description='Discover a portfolio of innovative and challenging projects.'
+					title='Projects - Mael Kerichard'></MetaTags>
 
 <main class='text-lg p-4'>
 	<div class='text-slate-50 max-w-6xl m-auto space-y-10'>

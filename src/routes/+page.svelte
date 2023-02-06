@@ -1,14 +1,14 @@
-<script lang="ts">
+<script lang='ts'>
 import logo from '$lib/assets/mael.png?w=300;400;500&format=webp&srcset';
+import MetaTags from '$lib/MetaTags.svelte';
 </script>
 
-<svelte:head>
-	<title>Mael Kerichard</title>
-</svelte:head>
+<MetaTags description='A french student enrolled in an engineering degree in computer science.'
+					title='Mael Kerichard'></MetaTags>
 
-<div class="h-full flex-grow flex justify-center bg-slate-900 p-4">
-	<div class="xl:max-w-6xl m-auto xl:space-x-20 flex-col xl:flex-row items-center flex">
-		<div class="space-y-10">
+<div class='h-full flex-grow flex justify-center bg-slate-900 p-4'>
+	<div class='xl:max-w-6xl m-auto xl:space-x-20 flex-col xl:flex-row items-center flex'>
+		<div class='space-y-10'>
 			<div class='bg-blue-600 p-2 rounded-md inline-block text-slate-50 font-bold'>
 				👋 Hi There! I'm Mael
 			</div>
@@ -39,12 +39,12 @@ import logo from '$lib/assets/mael.png?w=300;400;500&format=webp&srcset';
 			</div>
 		</div>
 		<img
-			class="order-first xl:order-last mb-10"
+			alt='Mael'
 			srcset={logo}
 			height='300'
 			width='300'
-			type="image/webp"
-			alt="Mael"
+			class='order-first xl:order-last mb-10'
+			type='image/webp'
 		/>
 	</div>
 </div>
