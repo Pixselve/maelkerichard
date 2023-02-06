@@ -1,3 +1,4 @@
+export const prerender = true;
 import type { RequestHandler } from '@sveltejs/kit';
 import { getAllArticles } from '$lib/devtoAPI';
 
