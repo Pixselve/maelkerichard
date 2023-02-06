@@ -1,4 +1,6 @@
 <script lang='ts'>
+import MetaTags from '$lib/MetaTags.svelte';
+
 const events = [
 	{
 		timeDate: new Date('2019-09'),
@@ -71,9 +73,12 @@ events.forEach((event) => {
 });
 </script>
 
-<svelte:head>
-	<title>Timeline - Mael Kerichard</title>
-</svelte:head>
+
+<MetaTags canonical='https://mael.app/timeline'
+					description='Explore the professional journey of a skilled developer on the timeline page.'
+					title='Timeline - Mael Kerichard'></MetaTags>
+
+
 <main class='text-lg p-4 '>
 	<div class='text-slate-50 max-w-6xl m-auto space-y-10'>
 		<h1 class='text-5xl font-bold'>Timeline</h1>
