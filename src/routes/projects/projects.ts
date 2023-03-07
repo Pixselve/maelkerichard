@@ -80,6 +80,18 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 		name: 'Game Development',
 		projects: [
 			{
+				name: "Thumbthing's Wrong",
+				description:
+					"A game made in 48 hours for the ESIR Game Jam 2023. It's a multiplayer game made with Unreal Engine. A player is on PC and has to jump from platform to platform and up to 4 players on a mobile web app who have to help (or not) the main player to advance using cards that break the rules of the game.",
+				links: [
+					{
+						name: 'Web app',
+						url: 'https://github.com/Pixselve/thumbthings-wrong-client'
+					}
+				],
+				tags: ['Unreal', '5-person team', 'Game Jam', 'React', 'Realtime']
+			},
+			{
 				name: 'Age of tower',
 				description:
 					'A tower defense game made with Java and the StdDraw library. It features a map editor, animations, etc.',
