@@ -15,7 +15,7 @@ specifiers:
   svelte-preprocess: ^5.0.1
   tailwindcss: ^3.2.7
   tslib: ^2.5.0
-  typescript: ^4.9.5
+  typescript: ^5.0.0
   vite: ^4.1.4
   vite-imagetools: ^4.0.18
 
@@ -31,10 +31,10 @@ devDependencies:
   prettier-plugin-svelte: 2.9.0_jrsxveqmsx2uadbqiuq74wlc4u
   svelte: 3.55.1
   svelte-check: 3.0.4_gqx7lw3sljhsd4bstor5m2aa2u
-  svelte-preprocess: 5.0.1_b25a55hc532q56kmuqlrolam2i
+  svelte-preprocess: 5.0.1_fiu7xivzgvzx2zgulhejjkrgum
   tailwindcss: 3.2.7_postcss@8.4.21
   tslib: 2.5.0
-  typescript: 4.9.5
+  typescript: 5.0.2
   vite: 4.1.4
   vite-imagetools: 4.0.18
 
@@ -1487,6 +1487,56 @@ packages:
       typescript: 4.9.5
     dev: true
 
+  /svelte-preprocess/5.0.1_fiu7xivzgvzx2zgulhejjkrgum:
+    resolution: {integrity: sha512-0HXyhCoc9rsW4zGOgtInylC6qj259E1hpFnJMJWTf+aIfeqh4O/QHT31KT2hvPEqQfdjmqBR/kO2JDkkciBLrQ==}
+    engines: {node: '>= 14.10.0'}
+    requiresBuild: true
+    peerDependencies:
+      '@babel/core': ^7.10.2
+      coffeescript: ^2.5.1
+      less: ^3.11.3 || ^4.0.0
+      postcss: ^7 || ^8
+      postcss-load-config: ^2.1.0 || ^3.0.0 || ^4.0.0
+      pug: ^3.0.0
+      sass: ^1.26.8
+      stylus: ^0.55.0
+      sugarss: ^2.0.0 || ^3.0.0 || ^4.0.0
+      svelte: ^3.23.0
+      typescript: ^3.9.5 || ^4.0.0
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      coffeescript:
+        optional: true
+      less:
+        optional: true
+      postcss:
+        optional: true
+      postcss-load-config:
+        optional: true
+      pug:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@types/pug': 2.0.6
+      '@types/sass': 1.43.1
+      detect-indent: 6.1.0
+      magic-string: 0.27.0
+      postcss: 8.4.21
+      postcss-load-config: 4.0.1_postcss@8.4.21
+      sorcery: 0.11.0
+      strip-indent: 3.0.0
+      svelte: 3.55.1
+      typescript: 5.0.2
+    dev: true
+
   /svelte/3.55.1:
     resolution: {integrity: sha512-S+87/P0Ve67HxKkEV23iCdAh/SX1xiSfjF1HOglno/YTbSTW7RniICMCofWGdJJbdjw3S+0PfFb1JtGfTXE0oQ==}
     engines: {node: '>= 8'}
@@ -1578,6 +1628,12 @@ packages:
   /typescript/4.9.5:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
+    hasBin: true
+    dev: true
+
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: true
 
