@@ -11,6 +11,15 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 		name: 'Web Development',
 		projects: [
 			{
+				name: "QuizCraft",
+				description: "A web app to convert JSON into a Google Forms quiz.",
+				links: [
+					{ name: 'Code', url: 'https://github.com/Pixselve/quizcraft' },
+					{ name: 'Website', url: 'https://quizcraft.mael.app' }
+				],
+				tags: ['React', 'TypeScript', 'Google Forms', 'JSON']
+			},
+			{
 				name: "Kitten Asso's",
 				description:
 					'Two projects made at school to learn web development: a REST API made with NestJS and a frontend with Angular.',
