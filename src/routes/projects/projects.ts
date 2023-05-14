@@ -2,8 +2,15 @@ export interface ProjectType {
 	name: string;
 	description: string;
 
-	links: { name: string; url: string }[];
+	links: { name: string; url: string, type: LinkType }[];
 	tags: string[];
+}
+
+export enum LinkType {
+	Github = 'Github',
+	Preview = 'Preview',
+	Others = 'Others',
+	External = 'External'
 }
 
 export const projects: { name: string; projects: ProjectType[] }[] = [
@@ -14,8 +21,9 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 				name: 'QuizCraft',
 				description: 'A web app to convert JSON into a Google Forms quiz.',
 				links: [
-					{ name: 'Code', url: 'https://github.com/Pixselve/quizcraft' },
-					{ name: 'Hosted version', url: 'https://quizcraft.mael.app' }
+					{ name: 'Preview', url: 'https://quizcraft.mael.app', type: LinkType.Preview },
+					{ name: 'Code', url: 'https://github.com/Pixselve/quizcraft', type: LinkType.Github }
+
 				],
 				tags: ['React', 'TypeScript', 'Google Forms', 'JSON']
 			},
@@ -23,8 +31,9 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 				name: 'MacStats',
 				description: 'A web app to display stats about McDonald\'s restaurants in France.',
 				links: [
-					{ name: 'Code', url: 'https://github.com/Pixselve/macstats' },
-					{ name: 'Hosted version', url: 'https://macstats.mael.app' }
+					{ name: 'Preview', url: 'https://macstats.mael.app', type: LinkType.Preview },
+					{ name: 'Code', url: 'https://github.com/Pixselve/macstats', type: LinkType.Github }
+
 				],
 				tags: ['Svelte', 'Data Visualization', '2-person team', 'REST API']
 			},
@@ -33,8 +42,8 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 				description:
 					'Two projects made at school to learn web development: a REST API made with NestJS and a frontend with Angular.',
 				links: [
-					{ name: 'Frontend Code', url: 'https://github.com/pixselve-school/wm-projet' },
-					{ name: 'Backend Code', url: 'https://github.com/pixselve-school/tp1-wm' }
+					{ name: 'Frontend Code', url: 'https://github.com/pixselve-school/wm-projet', type: LinkType.Github },
+					{ name: 'Backend Code', url: 'https://github.com/pixselve-school/tp1-wm', type: LinkType.Github }
 				],
 				tags: ['Angular', 'NestJS', 'TypeScript', 'REST API', '2-person team']
 			},
@@ -42,8 +51,8 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 				name: 'Kontrakt',
 				description: 'A web app to manage students exercises progress and grades.',
 				links: [
-					{ name: 'Frontend Code', url: 'https://github.com/Pixselve/kontrakt-web' },
-					{ name: 'Backend Code', url: 'https://github.com/Pixselve/kontrakt-server-go' }
+					{ name: 'Frontend Code', url: 'https://github.com/Pixselve/kontrakt-web', type: LinkType.Github },
+					{ name: 'Backend Code', url: 'https://github.com/Pixselve/kontrakt-server-go', type: LinkType.Github },
 				],
 				tags: ['Vue', 'Go', 'GraphQL', 'TypeScript']
 			}
@@ -59,7 +68,8 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 				links: [
 					{
 						name: 'Code',
-						url: 'https://github.com/pixselve-school/projet-al'
+						url: 'https://github.com/pixselve-school/projet-al',
+						type: LinkType.Github
 					}
 				],
 				tags: ['Docker', 'Microservices', 'Architecture', 'CI', '2-person team']
@@ -83,11 +93,13 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 				links: [
 					{
 						name: 'Code',
-						url: 'https://github.com/Pixselve/gitlab-pipeline-to-md'
+						url: 'https://github.com/Pixselve/gitlab-pipeline-to-md',
+						type: LinkType.Github
 					},
 					{
 						name: 'Nuit de l\'info',
-						url: 'https://www.nuitdelinfo.com'
+						url: 'https://www.nuitdelinfo.com',
+						type: LinkType.External
 					}
 				],
 				tags: ['CLI', 'TypeScript', 'Gitlab CI']
@@ -104,7 +116,8 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 				links: [
 					{
 						name: 'Web app code',
-						url: 'https://github.com/Pixselve/thumbthings-wrong-client'
+						url: 'https://github.com/Pixselve/thumbthings-wrong-client',
+						type: LinkType.Github
 					}
 				],
 				tags: ['Unreal', '5-person team', 'Game Jam', 'React', 'Realtime']
@@ -116,7 +129,8 @@ export const projects: { name: string; projects: ProjectType[] }[] = [
 				links: [
 					{
 						name: 'Code',
-						url: 'https://github.com/pixselve-school/towerdefensejava'
+						url: 'https://github.com/pixselve-school/towerdefensejava',
+						type: LinkType.Github
 					}
 				],
 				tags: ['Java', 'StdDraw', 'Game', '2-person team']
