@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <svelte:head>
 	<title>404 - Page not found</title>
 </svelte:head>
