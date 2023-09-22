@@ -1,15 +1,17 @@
 <script lang='ts'>
 import MetaTags from '$lib/MetaTags.svelte';
+import SvelteMarkdown from 'svelte-markdown'
+import ListElement from './ListElement.svelte';
 
-const events = [
+const events: Event[] = [
 	{
 		type: 'work',
-		timeDate: new Date('2019-09'),
+		start: new Date('2019-09'),
 		title: 'Join the École Supérieure d\'Ingénieurs de Rennes'
 	},
 	{
 		type: 'competition',
-		timeDate: new Date('2020-09'),
+		start: new Date('2020-09'),
 		ranking: '4th place',
 		title: 'Break The Code - Breizh Edition 2020',
 		description:
@@ -17,7 +19,7 @@ const events = [
 	},
 	{
 		type: 'competition',
-		timeDate: new Date('2021-03'),
+		start: new Date('2021-03'),
 		title: 'SWERC 2020-2021',
 		ranking: '96/107',
 		description:
@@ -25,14 +27,14 @@ const events = [
 	},
 	{
 		type: 'competition',
-		timeDate: new Date('2021-10'),
+		start: new Date('2021-10'),
 		title: 'Break The Code - Breizh Edition 2021',
 		description:
 			'90 students from 9 schools tried to solve the riddles written by the technical community of Sopra Steria Rennes.'
 	},
 	{
 		type: 'competition',
-		timeDate: new Date('2022-04'),
+		start: new Date('2022-04'),
 		title: 'SWERC 2021-2022',
 		description:
 			'SWERC is a 5-hour programming competition for teams of three students (see rules), focusing on algorithmic problem solving and hands-on coding.',
@@ -41,7 +43,8 @@ const events = [
 	{
 		logo: '/timeline-icons/huawei.svg',
 		type: 'work',
-		timeDate: new Date('2022-06'),
+		start: new Date('2022-06'),
+		end: new Date('2022-08-31'),
 		title: 'Internship at Huawei Paris Research Center',
 		description:
 			'A 3 month internship where I needed to implement of a network protocol on top of IPv6 using the Rust programming language.'
@@ -49,7 +52,7 @@ const events = [
 	{
 		logo: '/timeline-icons/nuit-de-linfo.png',
 		type: 'competition',
-		timeDate: new Date('2022-12'),
+		start: new Date('2022-12'),
 		title: 'Nuit de l\'Info 2022',
 		ranking: '1st place a challenge',
 		description:
@@ -57,7 +60,7 @@ const events = [
 	},
 	{
 		type: 'competition',
-		timeDate: new Date('2023-03'),
+		start: new Date('2023-03'),
 		title: 'ESIR Game Jam 2023',
 		ranking: '1st place',
 		description:
@@ -66,28 +69,42 @@ const events = [
 	{
 		logo: '/timeline-icons/amazon.svg',
 		type: 'work',
-		timeDate: new Date('2023-06'),
+		start: new Date('2023-06'),
+		end: new Date('2023-09-30'),
 		title: 'Internship as a Software Development Engineer at Amazon Dublin',
 		description:
 			`As a Software Development Engineer Intern at Amazon, I contributed to the development and deployment of a data-driven workflow.
 
-Responsibilities:
+**Responsibilities:**
 - Developed and implemented backend functionalities utilizing AWS services such as Lambda, DynamoDB, S3, and Redshift.
 - Wrote and executed unit tests and integration tests to ensure the software's reliability and performance.
 - Assisted in the architecture and deployment of cloud infrastructure using AWS Cloud Development Kit (CDK) and AWS CloudFormation.
 - Participated in the setup and maintenance of CI/CD pipelines to automate testing and deployment processes.
 
-Achievements:
+**Achievements:**
 - Successfully applied Amazon's Leadership Principles, emphasizing customer obsession, ownership, and long-term thinking.
 
-Skills Gained:
+**Skills Gained:**
 - Gained in-depth knowledge of AWS services and cloud architectures.
 - Improved software testing and automation skills through hands-on experience with CI/CD pipelines.
 - Developed effective collaboration and communication skills by working in a fast-paced, agile environment.
 - Honed problem-solving skills and learned best practices for software development from industry experts.`
-
+	},
+	{
+		type: "work",
+		start: new Date('2024-03'),
+		end: new Date('2024-09'),
+		title: "End of studies internship",
+	},
+	{
+		type: 'work',
+		logo: '/timeline-icons/esir.svg',
+		start: new Date('2024-09'),
+		title: 'Graduate from the École Supérieure d\'Ingénieurs de Rennes',
+		description:
+			'🎉 Graduate from the École Supérieure d\'Ingénieurs de Rennes with a Engineering degree in Computer Science and Information Systems.'
 	}
-].sort((a, b) => b.timeDate.getTime() - a.timeDate.getTime());
+].sort((a, b) => b.start.getTime() - a.start.getTime());
 
 interface Year {
 	text: string;
@@ -95,9 +112,13 @@ interface Year {
 }
 
 interface Event {
-	timeDate: Date;
+	start: Date;
 	title: string;
 	description?: string;
+	logo?: string;
+	type: string;
+	ranking?: string;
+	end?: Date;
 }
 
 /*
@@ -108,7 +129,7 @@ Format: Year[]
 const years: Year[] = [];
 
 events.forEach((event) => {
-	const year = event.timeDate.getFullYear();
+	const year = event.start.getFullYear();
 	const yearIndex = years.findIndex((y) => y.text === year.toString());
 	if (yearIndex === -1) {
 		years.push(<Year>{
@@ -172,12 +193,22 @@ events.forEach((event) => {
 									<div>
 										<header class='flex md:space-x-2 flex-col md:flex-row'>
 											<h3 class='font-bold'>{event.title}</h3>
-											<time class='text-white/50'
-											>{event.timeDate.toLocaleString('en-US', {
-												month: 'long',
-												year: 'numeric'
-											})}</time
-											>
+											<div class='text-white/50'>
+												<time
+												>{event.start.toLocaleString('en-US', {
+													month: 'long',
+													year: 'numeric'
+												})}</time
+												>
+												{#if event.end}
+													<span>-</span>
+													<time>{event.end.toLocaleString('en-US', {
+														month: 'long',
+														year: 'numeric'
+													})}</time>
+													<span>({Math.floor((event.end.getTime() - event.start.getTime()) / (1000 * 60 * 60 * 24 * 30))} months)</span>
+												{/if}
+											</div>
 										</header>
 										{#if event.ranking}
 											<div class='text-sm bg-blue-500 px-1 p-0.5 rounded-md inline'>
@@ -189,18 +220,28 @@ events.forEach((event) => {
 								</div>
 
 								<p class='text-white/70'>
-									{event.description}
+									<SvelteMarkdown renderers={{list: ListElement}} source={event.description} />
 								</p>
 							</div>
 						{:else}
 							<header class='flex md:space-x-2 flex-col md:flex-row'>
 								<h3 class='font-bold'>{event.title}</h3>
-								<time class='text-white/50'
-								>{event.timeDate.toLocaleString('en-US', {
-									month: 'long',
-									year: 'numeric'
-								})}</time
-								>
+								<div class='text-white/50'>
+									<time
+									>{event.start.toLocaleString('en-US', {
+										month: 'long',
+										year: 'numeric'
+									})}</time
+									>
+									{#if event.end}
+										<span>-</span>
+										<time>{event.end.toLocaleString('en-US', {
+											month: 'long',
+											year: 'numeric'
+										})}</time>
+										<span>({Math.floor((event.end.getTime() - event.start.getTime()) / (1000 * 60 * 60 * 24 * 30))} months)</span>
+									{/if}
+								</div>
 							</header>
 						{/if}
 					{/each}
