@@ -102,7 +102,7 @@ const events: Event[] = [
 		start: new Date('2024-09'),
 		title: 'Graduate from the École Supérieure d\'Ingénieurs de Rennes',
 		description:
-			'🎉 Graduate from the École Supérieure d\'Ingénieurs de Rennes with a Engineering degree in Computer Science and Information Systems.'
+			'🎉 Graduate from the École Supérieure d\'Ingénieurs de Rennes with an Engineering degree in Computer Science and Information Systems.'
 	}
 ].sort((a, b) => b.start.getTime() - a.start.getTime());
 
