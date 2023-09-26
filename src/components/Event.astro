@@ -1,6 +1,7 @@
 ---
 import { MarkdownInstance } from "astro";
 import { Image } from "astro:assets";
+import { CollectionEntry } from "astro:content";
 
 type FrontMatter = {
   title: string;
@@ -11,11 +12,11 @@ type FrontMatter = {
   ranking?: string;
 };
 
-const { event } = Astro.props as { event: MarkdownInstance<FrontMatter> };
-const text = event.compiledContent();
+const { event } = Astro.props as { event: CollectionEntry<"timeline"> };
+const { Content } = await event.render();
 
-const startDate = new Date(event.frontmatter.start);
-const endDate = event.frontmatter.end ? new Date(event.frontmatter.end) : null;
+const startDate = new Date(event.data.start);
+const endDate = event.data.end ? new Date(event.data.end) : null;
 
 const start = startDate.toLocaleString("en-US", {
   month: "long",
@@ -48,12 +49,12 @@ const duration = Math.round(
 </span>
 
 {
-  text && (
+  event.body && (
     <div class="bg-slate-800 p-4 rounded-2xl border-2 border-slate-700 mb-5 space-y-4">
       <div class="flex gap-4 items-center">
-        {event.frontmatter.logo && (
+        {event.data.logo && (
           <Image
-            src={event.frontmatter.logo}
+            src={event.data.logo}
             alt="Event logo"
             height="50"
             width="50"
@@ -61,7 +62,7 @@ const duration = Math.round(
         )}
         <div>
           <header class="flex md:space-x-2 flex-col md:flex-row">
-            <h3 class="font-bold">{event.frontmatter.title}</h3>
+            <h3 class="font-bold">{event.data.title}</h3>
             <div class="text-white/50">
               <time>{start}</time>
               {end && (
@@ -72,22 +73,24 @@ const duration = Math.round(
               )}
             </div>
           </header>
-          {event.frontmatter.ranking && (
+          {event.data.ranking && (
             <div class="text-sm bg-blue-500 px-1 p-0.5 rounded-md inline">
-              {event.frontmatter.ranking}
+              {event.data.ranking}
             </div>
           )}
         </div>
       </div>
-      <div set:html={text} class="prose prose-invert max-w-none" />
+      <div class="prose prose-invert max-w-none">
+        <Content />
+      </div>
     </div>
   )
 }
 
 {
-  !text && (
+  !event.body && (
     <header class="flex md:space-x-2 flex-col md:flex-row">
-      <h3 class="font-bold">{event.frontmatter.title}</h3>
+      <h3 class="font-bold">{event.data.title}</h3>
       <div class="text-white/50">
         <time>{start}</time>
         {end && (

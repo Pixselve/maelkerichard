@@ -1,34 +1,19 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import { MarkdownInstance } from "astro";
 import Event from "../../components/Event.astro";
-
-type FrontMatter = {
-  title: string;
-  start: string;
-  end?: string;
-  logo?: string;
-  type: string;
-  ranking?: string;
-};
-
-const events = await Astro.glob<FrontMatter>("../../timeline-data/*.md");
+import { getCollection } from "astro:content";
+const events = await getCollection("timeline");
 
 const sortedEvents = events.sort((a, b) => {
-  const aStart = new Date(a.frontmatter.start);
-  const bStart = new Date(b.frontmatter.start);
+  const aStart = new Date(a.data.start);
+  const bStart = new Date(b.data.start);
   return bStart.getTime() - aStart.getTime();
 });
 
-type Year = {
-  year: number;
-  events: MarkdownInstance<FrontMatter>[];
-};
-
-const years: Year[] = [];
+const years = [];
 
 sortedEvents.forEach((event) => {
-  const start = new Date(event.frontmatter.start);
+  const start = new Date(event.data.start);
   const year = start.getFullYear();
   const yearIndex = years.findIndex((y) => y.year === year);
   if (yearIndex === -1) {
