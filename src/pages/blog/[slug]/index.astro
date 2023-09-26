@@ -1,0 +1,70 @@
+---
+import { getAllArticles, getArticle } from "../../../utils/devtoAPI";
+import Layout from "../../../layouts/Layout.astro";
+import shiki from "shiki";
+import markdown from "markdown-it";
+export async function getStaticPaths() {
+  const articles = await getAllArticles();
+  return articles.map((article) => ({ params: { slug: article.slug } }));
+}
+
+const { slug } = Astro.params;
+const article = await getArticle(slug);
+
+const highlighter = await shiki.getHighlighter({
+  theme: "nord",
+});
+
+const md = markdown({
+  html: true,
+  highlight: (code, lang) => {
+    return highlighter.codeToHtml(code, lang);
+  },
+});
+const content = md.render(article.body_markdown);
+
+const articleSEOTags = {
+  publishedAt: article.published_at,
+  author: ["Mael Kerichard"],
+  tags: article.tags,
+  section: "Technology",
+};
+---
+
+<Layout
+  title={article.title}
+  description={article.description}
+  image={article.social_image}
+  article={articleSEOTags}
+>
+  <main class="text-lg p-4">
+    <div class="text-slate-50 max-w-3xl m-auto space-y-10">
+      <h1 class="text-5xl font-bold">{article.title}</h1>
+      <div class="space-y-4">
+        <div>
+          <span class="text-slate-200"
+            >{new Date(article.published_at).toLocaleDateString()}</span
+          >
+          <span class="text-slate-200">•</span>
+          <span class="text-slate-200"
+            >{article.reading_time_minutes} min read</span
+          >
+        </div>
+        <div class="flex space-x-2 flex-wrap">
+          {
+            article.tags.map((tag) => (
+              <div class="inline text-sm bg-blue-500/20 px-1 p-0.5 rounded-md">
+                {tag}
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <article
+        class="prose prose-lg prose-invert prose-blue w-full"
+        set:html={content}
+      />
+    </div>
+  </main>
+</Layout>

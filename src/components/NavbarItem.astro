@@ -1,0 +1,9 @@
+---
+const { href, selected } = Astro.props;
+
+const selectedClass = selected ? "border-blue-500" : "border-transparent";
+---
+
+<a class={`sm:text-xl font-bold border-b-4 ${selectedClass}`} href={href}
+  ><slot /></a
+>
