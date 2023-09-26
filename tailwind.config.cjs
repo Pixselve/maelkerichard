@@ -1,11 +1,20 @@
-const config = {
-  content: ["./src/**/*.{html,js,svelte,ts}"],
-
-  theme: {
-    extend: {}
-  },
-
-  plugins: [require('@tailwindcss/typography')]
-};
-
-module.exports = config;
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+	theme: {
+		extend: {
+			keyframes: {
+				wave: {
+					'0%, 100%': { transform: 'rotate(0deg)' },
+					'50%': { transform: 'rotate(25deg)' },
+				}
+			},
+			animation: {
+				wave: 'wave 0.5s ease-in-out infinite',
+			}
+		},
+	},
+	plugins: [
+		require('@tailwindcss/typography'),
+	],
+}

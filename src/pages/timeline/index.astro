@@ -1,0 +1,57 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Event from "../../components/Event.astro";
+import { getCollection } from "astro:content";
+const events = await getCollection("timeline");
+
+const sortedEvents = events.sort((a, b) => {
+  const aStart = new Date(a.data.start);
+  const bStart = new Date(b.data.start);
+  return bStart.getTime() - aStart.getTime();
+});
+
+const years = [];
+
+sortedEvents.forEach((event) => {
+  const start = new Date(event.data.start);
+  const year = start.getFullYear();
+  const yearIndex = years.findIndex((y) => y.year === year);
+  if (yearIndex === -1) {
+    years.push({
+      year,
+      events: [event],
+    });
+  } else {
+    years[yearIndex].events.push(event);
+  }
+});
+---
+
+<Layout
+  description="Explore the professional journey of a skilled developer on the timeline page."
+  title="Timeline - Mael Kerichard"
+>
+  <main class="text-lg p-4">
+    <div class="text-slate-50 max-w-6xl m-auto space-y-10">
+      <h1 class="text-5xl font-bold">Timeline</h1>
+      <ol class="relative border-l-[3px] border-slate-800 mt-4">
+        {
+          years.map((year) => (
+            <>
+              <li class="mb-10 ml-6">
+                <h1 class="text-5xl font-bold border-b-[5px] pb-2 border-dotted">
+                  {year.year}
+                </h1>
+              </li>
+              <li class="mb-10 ml-6">
+                {year.events.map((event) => (
+                  <Event event={event} />
+                ))}
+              </li>
+            </>
+          ))
+        }
+      </ol>
+    </div>
+  </main>
+</Layout>

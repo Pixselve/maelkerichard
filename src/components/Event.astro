@@ -1,0 +1,105 @@
+---
+import { MarkdownInstance } from "astro";
+import { Image } from "astro:assets";
+import { CollectionEntry } from "astro:content";
+
+type FrontMatter = {
+  title: string;
+  start: string;
+  end?: string;
+  logo?: string;
+  type: string;
+  ranking?: string;
+};
+
+const { event } = Astro.props as { event: CollectionEntry<"timeline"> };
+const { Content } = await event.render();
+
+const startDate = new Date(event.data.start);
+const endDate = event.data.end ? new Date(event.data.end) : null;
+
+const start = startDate.toLocaleString("en-US", {
+  month: "long",
+  year: "numeric",
+});
+
+const end = endDate?.toLocaleString("en-US", {
+  month: "long",
+  year: "numeric",
+});
+
+// Duration in months
+const duration = Math.round(
+  (endDate?.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 30),
+);
+---
+
+<span
+  class="absolute flex items-center justify-center w-6 h-6 bg-blue-500 rounded-full -left-3 ring-8 ring-slate-900 text-xs"
+>
+  <svg
+    class="h-4 w-4 fill-white"
+    xmlns="http://www.w3.org/2000/svg"
+    data-name="Layer 1"
+    viewBox="0 0 24 24"
+    ><path
+      d="M21,4H18V3a1,1,0,0,0-1-1H7A1,1,0,0,0,6,3V4H3A1,1,0,0,0,2,5V8a4,4,0,0,0,4,4H7.54A6,6,0,0,0,11,13.91V16H10a3,3,0,0,0-3,3v2a1,1,0,0,0,1,1h8a1,1,0,0,0,1-1V19a3,3,0,0,0-3-3H13V13.91A6,6,0,0,0,16.46,12H18a4,4,0,0,0,4-4V5A1,1,0,0,0,21,4ZM6,10A2,2,0,0,1,4,8V6H6V8a6,6,0,0,0,.35,2Zm8,8a1,1,0,0,1,1,1v1H9V19a1,1,0,0,1,1-1ZM16,8A4,4,0,0,1,8,8V4h8Zm4,0a2,2,0,0,1-2,2h-.35A6,6,0,0,0,18,8V6h2Z"
+    ></path></svg
+  >
+</span>
+
+{
+  event.body && (
+    <div class="bg-slate-800 p-4 rounded-2xl border-2 border-slate-700 mb-5 space-y-4">
+      <div class="flex gap-4 items-center">
+        {event.data.logo && (
+          <Image
+            src={event.data.logo}
+            alt="Event logo"
+            height="50"
+            width="50"
+          />
+        )}
+        <div>
+          <header class="flex md:space-x-2 flex-col md:flex-row">
+            <h3 class="font-bold">{event.data.title}</h3>
+            <div class="text-white/50">
+              <time>{start}</time>
+              {end && (
+                <>
+                  <span> - </span> <time>{end}</time>{" "}
+                  <span> ({duration} months)</span>
+                </>
+              )}
+            </div>
+          </header>
+          {event.data.ranking && (
+            <div class="text-sm bg-blue-500 px-1 p-0.5 rounded-md inline">
+              {event.data.ranking}
+            </div>
+          )}
+        </div>
+      </div>
+      <div class="prose prose-invert max-w-none">
+        <Content />
+      </div>
+    </div>
+  )
+}
+
+{
+  !event.body && (
+    <header class="flex md:space-x-2 flex-col md:flex-row">
+      <h3 class="font-bold">{event.data.title}</h3>
+      <div class="text-white/50">
+        <time>{start}</time>
+        {end && (
+          <>
+            <span> - </span> <time>{end}</time>{" "}
+            <span> ({duration} months)</span>
+          </>
+        )}
+      </div>
+    </header>
+  )
+}
