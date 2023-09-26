@@ -1,0 +1,103 @@
+---
+import { SEO } from "astro-seo";
+import HouseBlank from "../components/svgs/HouseBlank.astro";
+import NavbarItem from "../components/NavbarItem.astro";
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    expirationTime?: string;
+    authors?: string[];
+    section?: string;
+    tags?: string[];
+  };
+}
+
+const { title, description, image: propsImage } = Astro.props;
+
+const url = new URL(Astro.url.pathname, Astro.url.origin);
+const image = propsImage ?? new URL("/social.png", Astro.url).href;
+const canonical = new URL(Astro.url.pathname, "https://mael.app").href;
+const article = Astro.props.article ?? {};
+
+const isNavbarItemSelected = (href: string) => {
+  // for /
+  if (href === "/") {
+    return Astro.url.pathname === href;
+  }
+  return Astro.url.pathname.startsWith(href);
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content={Astro.generator} />
+    <script
+      data-domain="mael.app"
+      defer
+      src="https://plausible.mael.app/js/script.js"></script>
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      openGraph={{
+        basic: {
+          title: title,
+          type: "A type.",
+          image: image,
+        },
+        optional: {
+          description: description,
+          siteName: "Mael Kerichard",
+          locale: "en_US",
+          url: url,
+        },
+        article: article,
+      }}
+      twitter={{
+        cardType: "summary_large_image",
+        title: title,
+        description: description,
+        image: image,
+      }}
+    />
+  </head>
+  <body>
+    <main class="min-h-screen bg-slate-900 flex flex-col">
+      <nav class="text-slate-50 p-4">
+        <div
+          class="flex justify-around sm:justify-end sm:space-x-10 max-w-6xl m-auto"
+        >
+          <NavbarItem selected={isNavbarItemSelected("/")} href="/">
+            Home
+          </NavbarItem>
+          <NavbarItem
+            selected={isNavbarItemSelected("/projects")}
+            href="/projects"
+          >
+            Projects
+          </NavbarItem>
+          <NavbarItem
+            selected={isNavbarItemSelected("/timeline")}
+            href="/timeline"
+          >
+            Timeline
+          </NavbarItem>
+          <NavbarItem selected={isNavbarItemSelected("/blog")} href="/blog">
+            Blog
+          </NavbarItem>
+        </div>
+      </nav>
+
+      <slot />
+    </main>
+  </body>
+</html>

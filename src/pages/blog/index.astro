@@ -1,0 +1,19 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getAllArticles } from "../../utils/devtoAPI";
+import ArticleCard from "../../components/ArticleCard.astro";
+
+const articles = await getAllArticles();
+---
+
+<Layout
+  description="Stay informed and gain valuable insights on the latest tech industry trends and developments."
+  title="Blog - Mael Kerichard"
+>
+  <main class="text-lg p-4">
+    <div class="text-slate-50 max-w-6xl m-auto space-y-10">
+      <h1 class="text-5xl font-bold">Articles</h1>
+      {articles.map((article) => <ArticleCard key="{article.id}" {article} />)}
+    </div>
+  </main>
+</Layout>
