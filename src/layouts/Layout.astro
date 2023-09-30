@@ -2,6 +2,8 @@
 import { SEO } from "astro-seo";
 import HouseBlank from "../components/svgs/HouseBlank.astro";
 import NavbarItem from "../components/NavbarItem.astro";
+import { ViewTransitions } from "astro:transitions";
+
 interface Props {
   title: string;
   description: string;
@@ -69,34 +71,34 @@ const isNavbarItemSelected = (href: string) => {
         image: image,
       }}
     />
+    <ViewTransitions />
   </head>
-  <body>
-    <main class="min-h-screen bg-slate-900 flex flex-col">
-      <nav class="text-slate-50 p-4">
-        <div
-          class="flex justify-around sm:justify-end sm:space-x-10 max-w-6xl m-auto"
+  <body class="min-h-screen bg-slate-900 flex flex-col">
+    <nav class="text-slate-50 p-4">
+      <div
+        class="flex justify-around sm:justify-end sm:space-x-10 max-w-6xl m-auto"
+      >
+        <NavbarItem selected={isNavbarItemSelected("/")} href="/">
+          Home
+        </NavbarItem>
+        <NavbarItem
+          selected={isNavbarItemSelected("/projects")}
+          href="/projects"
         >
-          <NavbarItem selected={isNavbarItemSelected("/")} href="/">
-            Home
-          </NavbarItem>
-          <NavbarItem
-            selected={isNavbarItemSelected("/projects")}
-            href="/projects"
-          >
-            Projects
-          </NavbarItem>
-          <NavbarItem
-            selected={isNavbarItemSelected("/timeline")}
-            href="/timeline"
-          >
-            Timeline
-          </NavbarItem>
-          <NavbarItem selected={isNavbarItemSelected("/blog")} href="/blog">
-            Blog
-          </NavbarItem>
-        </div>
-      </nav>
-
+          Projects
+        </NavbarItem>
+        <NavbarItem
+          selected={isNavbarItemSelected("/timeline")}
+          href="/timeline"
+        >
+          Timeline
+        </NavbarItem>
+        <NavbarItem selected={isNavbarItemSelected("/blog")} href="/blog">
+          Blog
+        </NavbarItem>
+      </div>
+    </nav>
+    <main class="flex-grow flex justify-center p-4" transition:animate="fade">
       <slot />
     </main>
   </body>
