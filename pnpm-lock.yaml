@@ -36,8 +36,8 @@ dependencies:
     specifier: ^0.32.6
     version: 0.32.6
   shiki:
-    specifier: ^0.14.4
-    version: 0.14.4
+    specifier: ^0.14.5
+    version: 0.14.5
   tailwindcss:
     specifier: ^3.0.24
     version: 3.3.3
@@ -3764,8 +3764,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /shiki@0.14.4:
-    resolution: {integrity: sha512-IXCRip2IQzKwxArNNq1S+On4KPML3Yyn8Zzs/xRgcgOWIr8ntIK3IKzjFPfjy/7kt9ZMjc+FItfqHRBg8b6tNQ==}
+  /shiki@0.14.5:
+    resolution: {integrity: sha512-1gCAYOcmCFONmErGTrS1fjzJLA7MGZmKzrBNX7apqSwhyITJg2O102uFzXUeBxNnEkDA9vHIKLyeKq0V083vIw==}
     dependencies:
       ansi-sequence-parser: 1.1.1
       jsonc-parser: 3.2.0
