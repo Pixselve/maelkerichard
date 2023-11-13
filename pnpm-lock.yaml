@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^13.0.5
     version: 13.0.5
   '@types/prismjs':
-    specifier: ^1.26.2
-    version: 1.26.2
+    specifier: ^1.26.3
+    version: 1.26.3
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
@@ -1005,8 +1005,8 @@ packages:
     resolution: {integrity: sha512-SuT16Q1K51EAVPz1K29DJ/sXjhSQ0zjvsypYJ6tlwVsRV9jwW5Adq2ch8Dq8kDBCkYnELS7N7VNCSB5nC56t/g==}
     dev: false
 
-  /@types/prismjs@1.26.2:
-    resolution: {integrity: sha512-/r7Cp7iUIk7gts26mHXD66geUC+2Fo26TZYjQK6Nr4LDfi6lmdRmMqM0oPwfiMhUwoBAOFe8GstKi2pf6hZvwA==}
+  /@types/prismjs@1.26.3:
+    resolution: {integrity: sha512-A0D0aTXvjlqJ5ZILMz3rNfDBOx9hHxLZYv2by47Sm/pqW35zzjusrZTryatjN/Rf8Us2gZrJD+KeHbUSTux1Cw==}
     dev: true
 
   /@types/sax@1.2.6:
