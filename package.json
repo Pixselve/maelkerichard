@@ -27,6 +27,6 @@
     "@types/markdown-it": "^13.0.7",
     "@types/prismjs": "^1.26.3",
     "prettier": "^3.2.4",
-    "prettier-plugin-astro": "^0.12.3"
+    "prettier-plugin-astro": "^0.13.0"
   }
 }
