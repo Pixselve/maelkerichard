@@ -1,8 +1,9 @@
 ---
 import { getAllArticles, getArticle } from "../../../utils/devtoAPI";
 import Layout from "../../../layouts/Layout.astro";
-import shiki from "shiki";
 import markdown from "markdown-it";
+import Shiki from "@shikijs/markdown-it";
+
 export async function getStaticPaths() {
   const articles = await getAllArticles();
   return articles.map((article) => ({ params: { slug: article.slug } }));
@@ -11,16 +12,16 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 const article = await getArticle(slug);
 
-const highlighter = await shiki.getHighlighter({
-  theme: "nord",
-});
-
 const md = markdown({
   html: true,
-  highlight: (code, lang) => {
-    return highlighter.codeToHtml(code, lang);
-  },
 });
+
+md.use(
+  await Shiki({
+    theme: "nord",
+  }),
+);
+
 const content = md.render(article.body_markdown);
 
 const articleSEOTags = {
