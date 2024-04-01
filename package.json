@@ -20,7 +20,7 @@
     "astro-seo": "^0.8.3",
     "markdown-it": "^14.1.0",
     "sharp": "^0.33.3",
-    "tailwindcss": "^3.4.1",
+    "tailwindcss": "^3.4.3",
     "@shikijs/markdown-it": "^1.2.0"
   },
   "devDependencies": {
