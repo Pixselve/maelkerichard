@@ -24,7 +24,7 @@
     "@shikijs/markdown-it": "^1.2.4"
   },
   "devDependencies": {
-    "@types/markdown-it": "^13.0.7",
+    "@types/markdown-it": "^14.0.0",
     "@types/prismjs": "^1.26.3",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
