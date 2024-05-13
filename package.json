@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@types/markdown-it": "^13.0.7",
-    "@types/prismjs": "^1.26.3",
+    "@types/prismjs": "^1.26.4",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
   }
