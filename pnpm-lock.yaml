@@ -30,8 +30,8 @@ dependencies:
     specifier: ^1.0.0
     version: 1.0.0
   astro-seo:
-    specifier: ^0.8.3
-    version: 0.8.3(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.3.3)
+    specifier: ^0.8.4
+    version: 0.8.4(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.3.3)
   markdown-it:
     specifier: ^14.1.0
     version: 14.1.0
@@ -78,7 +78,7 @@ packages:
       typescript: ^5.0.0
     dependencies:
       '@astrojs/language-server': 2.7.4(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.3.3)
-      chokidar: 3.5.3
+      chokidar: 3.6.0
       fast-glob: 3.3.2
       kleur: 4.1.5
       typescript: 5.3.3
@@ -1639,8 +1639,8 @@ packages:
       zod: 3.22.4
     dev: false
 
-  /astro-seo@0.8.3(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-gQeEh0U2yyVM0iyU8DTORK6hXMy5WH2wufrkUuNOKjI3LnYLniqgDxm1LZPQDuD6b4OHabVOi/5L88A9POCcCQ==}
+  /astro-seo@0.8.4(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
     dependencies:
       '@astrojs/check': 0.5.4(prettier-plugin-astro@0.14.0)(prettier@3.3.0)(typescript@5.3.3)
     transitivePeerDependencies:
