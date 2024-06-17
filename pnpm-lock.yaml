@@ -18,8 +18,8 @@ dependencies:
     specifier: ^5.1.0
     version: 5.1.0(astro@4.10.2)(tailwindcss@3.4.4)
   '@shikijs/markdown-it':
-    specifier: ^1.6.2
-    version: 1.6.2
+    specifier: ^1.6.5
+    version: 1.6.5
   '@tailwindcss/typography':
     specifier: ^0.5.13
     version: 0.5.13(tailwindcss@3.4.4)
@@ -1104,26 +1104,22 @@ packages:
     resolution: {integrity: sha512-NIEAi5U5R7BLkbW1pG/ZKu3eb1lzc3/+jD0lFsuxMT7zjaf9bbNwdNyMr7zh/Zl8EXQtQ+MYBAt5G+JLu+5DlA==}
     dev: false
 
-  /@shikijs/core@1.6.2:
-    resolution: {integrity: sha512-guW5JeDzZ7uwOjTfCOFZ2VtVXk5tmkMzBYbKGfXsmAH1qYOej49L5jQDcGmwd6/OgvpmWhzO2GNJkQIFnbwLPQ==}
-    dev: false
-
   /@shikijs/core@1.6.5:
     resolution: {integrity: sha512-XcQYt6e4L61ruAxHiL3Xg1DL/XkWWjzDdeckB/DtN8jAxoAU+bcxsV6DetC8NafHpL4YpGhxy9iXF0ND/u6HmA==}
     dev: false
 
-  /@shikijs/markdown-it@1.6.2:
-    resolution: {integrity: sha512-VhY7XJepbcb7ORS7uOyK0E3cgt7Ov8yMxyhZLbTm09SjfGlWUyLULHXzzyutCEOLWW4LWnemK521xJiG7dC1HQ==}
+  /@shikijs/markdown-it@1.6.5:
+    resolution: {integrity: sha512-EzGWBUNGRUaSXBWUpuxYIzxx7u4A9p3EdPjcdcqZnKVt8s58QcekJawmWqOD04iCrF+P8ucrGAVEO2H175Bvmw==}
     dependencies:
-      '@shikijs/transformers': 1.6.2
+      '@shikijs/transformers': 1.6.5
       markdown-it: 14.1.0
-      shiki: 1.6.2
+      shiki: 1.6.5
     dev: false
 
-  /@shikijs/transformers@1.6.2:
-    resolution: {integrity: sha512-ndqTWyHnxmsLkowhKWTam26opw8hg5a34y6FAUG/Xf6E49n3MM//nenKxXiWpPYkNPl1KZnYXB1k+Ia46wjOZg==}
+  /@shikijs/transformers@1.6.5:
+    resolution: {integrity: sha512-iuKa1uQtPQEe5vgCsXIb162b/3imRiAIdoF5IqafrTWL1uqZUpipfPjWZPuAAszOzYU//yIYRbhUk8reHVXA/w==}
     dependencies:
-      shiki: 1.6.2
+      shiki: 1.6.5
     dev: false
 
   /@tailwindcss/typography@0.5.13(tailwindcss@3.4.4):
@@ -3950,12 +3946,6 @@ packages:
     resolution: {integrity: sha512-P31ROeXcVgW/k3Z+vUUErcxoTah7ZRaimctOpzGuqAntqnnSmx1HOsvnbAB8Z2qfXPRhw61yptAzCsuKOhTHwQ==}
     dependencies:
       '@shikijs/core': 1.6.0
-    dev: false
-
-  /shiki@1.6.2:
-    resolution: {integrity: sha512-X3hSm5GzzBd/BmPmGfkueOUADLyBoZo1ojYQXhd+NU2VJn458yt4duaS0rVzC+WtqftSV7mTVvDw+OB9AHi3Eg==}
-    dependencies:
-      '@shikijs/core': 1.6.2
     dev: false
 
   /shiki@1.6.5:
