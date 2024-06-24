@@ -18,8 +18,8 @@ dependencies:
     specifier: ^5.1.0
     version: 5.1.0(astro@4.11.0)(tailwindcss@3.4.4)
   '@shikijs/markdown-it':
-    specifier: ^1.6.5
-    version: 1.6.5
+    specifier: ^1.9.0
+    version: 1.9.0
   '@tailwindcss/typography':
     specifier: ^0.5.13
     version: 0.5.13(tailwindcss@3.4.4)
@@ -148,7 +148,7 @@ packages:
       remark-parse: 11.0.0
       remark-rehype: 11.0.0
       remark-smartypants: 2.0.0
-      shiki: 1.6.0
+      shiki: 1.6.5
       unified: 11.0.4
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -1100,26 +1100,26 @@ packages:
     dev: false
     optional: true
 
-  /@shikijs/core@1.6.0:
-    resolution: {integrity: sha512-NIEAi5U5R7BLkbW1pG/ZKu3eb1lzc3/+jD0lFsuxMT7zjaf9bbNwdNyMr7zh/Zl8EXQtQ+MYBAt5G+JLu+5DlA==}
-    dev: false
-
   /@shikijs/core@1.6.5:
     resolution: {integrity: sha512-XcQYt6e4L61ruAxHiL3Xg1DL/XkWWjzDdeckB/DtN8jAxoAU+bcxsV6DetC8NafHpL4YpGhxy9iXF0ND/u6HmA==}
     dev: false
 
-  /@shikijs/markdown-it@1.6.5:
-    resolution: {integrity: sha512-EzGWBUNGRUaSXBWUpuxYIzxx7u4A9p3EdPjcdcqZnKVt8s58QcekJawmWqOD04iCrF+P8ucrGAVEO2H175Bvmw==}
-    dependencies:
-      '@shikijs/transformers': 1.6.5
-      markdown-it: 14.1.0
-      shiki: 1.6.5
+  /@shikijs/core@1.9.0:
+    resolution: {integrity: sha512-cbSoY8P/jgGByG8UOl3jnP/CWg/Qk+1q+eAKWtcrU3pNoILF8wTsLB0jT44qUBV8Ce1SvA9uqcM9Xf+u3fJFBw==}
     dev: false
 
-  /@shikijs/transformers@1.6.5:
-    resolution: {integrity: sha512-iuKa1uQtPQEe5vgCsXIb162b/3imRiAIdoF5IqafrTWL1uqZUpipfPjWZPuAAszOzYU//yIYRbhUk8reHVXA/w==}
+  /@shikijs/markdown-it@1.9.0:
+    resolution: {integrity: sha512-y1DUEL0wf0UZ30dW1NBx4L9uQs2RN4x5gEZpM7t2/LmMGbJ7d2Hr8mzBlSU9+RWxqSirWX7e6av0tJLhcmd/Hw==}
     dependencies:
-      shiki: 1.6.5
+      '@shikijs/transformers': 1.9.0
+      markdown-it: 14.1.0
+      shiki: 1.9.0
+    dev: false
+
+  /@shikijs/transformers@1.9.0:
+    resolution: {integrity: sha512-wo8dNbZtFtVhKtw8BnXIT/FDTGMwEdWcQSIRa78ou14JGkMYxSCBN942W5+IRUifP5BwVUWgkXBYX/M3FUFkeg==}
+    dependencies:
+      shiki: 1.9.0
     dev: false
 
   /@tailwindcss/typography@0.5.13(tailwindcss@3.4.4):
@@ -3936,16 +3936,16 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /shiki@1.6.0:
-    resolution: {integrity: sha512-P31ROeXcVgW/k3Z+vUUErcxoTah7ZRaimctOpzGuqAntqnnSmx1HOsvnbAB8Z2qfXPRhw61yptAzCsuKOhTHwQ==}
-    dependencies:
-      '@shikijs/core': 1.6.0
-    dev: false
-
   /shiki@1.6.5:
     resolution: {integrity: sha512-iFzypldJG0zeyRHKAhaSGCf+YWXpMMyUyOrCVFBFKGGdF5vrB6jbd66/SQljxV20aSrVZEAQwUto/hhuNi/CIg==}
     dependencies:
       '@shikijs/core': 1.6.5
+    dev: false
+
+  /shiki@1.9.0:
+    resolution: {integrity: sha512-i6//Lqgn7+7nZA0qVjoYH0085YdNk4MC+tJV4bo+HgjgRMJ0JmkLZzFAuvVioJqLkcGDK5GAMpghZEZkCnwxpQ==}
+    dependencies:
+      '@shikijs/core': 1.9.0
     dev: false
 
   /signal-exit@3.0.7:
