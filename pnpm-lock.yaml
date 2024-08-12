@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^2.3.1
-        version: 2.3.1(astro@4.13.1(typescript@5.3.3))
+        version: 2.3.1(astro@4.13.3(typescript@5.3.3))
       '@astrojs/prefetch':
         specifier: ^0.4.1
         version: 0.4.1
@@ -19,7 +19,7 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.13.1(typescript@5.3.3))(tailwindcss@3.4.7)
+        version: 5.1.0(astro@4.13.3(typescript@5.3.3))(tailwindcss@3.4.7)
       '@shikijs/markdown-it':
         specifier: ^1.12.1
         version: 1.12.1
@@ -27,8 +27,8 @@ importers:
         specifier: ^0.5.13
         version: 0.5.13(tailwindcss@3.4.7)
       astro:
-        specifier: ^4.13.1
-        version: 4.13.1(typescript@5.3.3)
+        specifier: ^4.13.3
+        version: 4.13.3(typescript@5.3.3)
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -494,9 +494,6 @@ packages:
     resolution: {integrity: sha512-R8gLRTZeyp03ymzP/6Lil/28tGeGEzhx1q2k703KGWRAI1VdvPIXdG70VJc2pAMw3NA6JKL5hhFu1sJX0Mnn/A==}
     engines: {node: '>=6.0.0'}
 
-  '@jridgewell/sourcemap-codec@1.4.15':
-    resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
-
   '@jridgewell/sourcemap-codec@1.5.0':
     resolution: {integrity: sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==}
 
@@ -789,8 +786,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@4.13.1:
-    resolution: {integrity: sha512-VnMjAc+ykFsIVjgbu9Mt/EA1fMIcPMXbU89h3ATwGOzSIKDsQH72bDgfJkWiwk6u0OE90GeP5EPhAT28Twf9oA==}
+  astro@4.13.3:
+    resolution: {integrity: sha512-MyhmM0v5sphiVwxAm5jjKxWeuPZijWPJ8Ajdign9QzEmLWSH8vUYIJWx/dWRQ6vF1I0jXrksoj3wtw5nzXt9nw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -955,15 +952,6 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
-
-  debug@4.3.5:
-    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
 
   debug@4.3.6:
     resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
@@ -2473,8 +2461,8 @@ snapshots:
 
   '@astrojs/language-server@2.7.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.3.3)':
     dependencies:
-      '@astrojs/compiler': 2.9.2
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@astrojs/compiler': 2.10.1
+      '@jridgewell/sourcemap-codec': 1.5.0
       '@volar/kit': 2.0.4(typescript@5.3.3)
       '@volar/language-core': 2.0.4
       '@volar/language-server': 2.0.4
@@ -2541,12 +2529,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@2.3.1(astro@4.13.1(typescript@5.3.3))':
+  '@astrojs/mdx@2.3.1(astro@4.13.3(typescript@5.3.3))':
     dependencies:
       '@astrojs/markdown-remark': 5.1.0
       '@mdx-js/mdx': 3.0.0
       acorn: 8.11.2
-      astro: 4.13.1(typescript@5.3.3)
+      astro: 4.13.3(typescript@5.3.3)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -2576,9 +2564,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.13.1(typescript@5.3.3))(tailwindcss@3.4.7)':
+  '@astrojs/tailwind@5.1.0(astro@4.13.3(typescript@5.3.3))(tailwindcss@3.4.7)':
     dependencies:
-      astro: 4.13.1(typescript@5.3.3)
+      astro: 4.13.3(typescript@5.3.3)
       autoprefixer: 10.4.16(postcss@8.4.32)
       postcss: 8.4.32
       postcss-load-config: 4.0.2(postcss@8.4.32)
@@ -2894,21 +2882,19 @@ snapshots:
   '@jridgewell/gen-mapping@0.3.5':
     dependencies:
       '@jridgewell/set-array': 1.2.1
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
       '@jridgewell/trace-mapping': 0.3.25
 
   '@jridgewell/resolve-uri@3.1.1': {}
 
   '@jridgewell/set-array@1.2.1': {}
 
-  '@jridgewell/sourcemap-codec@1.4.15': {}
-
   '@jridgewell/sourcemap-codec@1.5.0': {}
 
   '@jridgewell/trace-mapping@0.3.25':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.1
-      '@jridgewell/sourcemap-codec': 1.4.15
+      '@jridgewell/sourcemap-codec': 1.5.0
 
   '@mdx-js/mdx@3.0.0':
     dependencies:
@@ -3226,7 +3212,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@4.13.1(typescript@5.3.3):
+  astro@4.13.3(typescript@5.3.3):
     dependencies:
       '@astrojs/compiler': 2.10.1
       '@astrojs/internal-helpers': 0.4.1
@@ -3455,10 +3441,6 @@ snapshots:
       which: 2.0.2
 
   cssesc@3.0.0: {}
-
-  debug@4.3.5:
-    dependencies:
-      ms: 2.1.2
 
   debug@4.3.6:
     dependencies:
@@ -4401,7 +4383,7 @@ snapshots:
   micromark@4.0.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.3.5
+      debug: 4.3.6
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.0
@@ -5066,7 +5048,7 @@ snapshots:
 
   typescript-auto-import-cache@0.3.2:
     dependencies:
-      semver: 7.6.2
+      semver: 7.6.3
 
   typescript@5.3.3: {}
 
@@ -5278,7 +5260,7 @@ snapshots:
     dependencies:
       '@volar/typescript': 2.0.4
       path-browserify: 1.0.1
-      semver: 7.6.2
+      semver: 7.6.3
       typescript-auto-import-cache: 0.3.2
       vscode-languageserver-textdocument: 1.0.11
       vscode-nls: 5.2.0
