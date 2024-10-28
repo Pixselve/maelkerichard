@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^2.3.1
-        version: 2.3.1(astro@4.16.6(rollup@4.21.2)(typescript@5.3.3))
+        version: 2.3.1(astro@4.16.7(rollup@4.21.2)(typescript@5.3.3))
       '@astrojs/prefetch':
         specifier: ^0.4.1
         version: 0.4.1
@@ -19,7 +19,7 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: ^5.1.2
-        version: 5.1.2(astro@4.16.6(rollup@4.21.2)(typescript@5.3.3))(tailwindcss@3.4.14)
+        version: 5.1.2(astro@4.16.7(rollup@4.21.2)(typescript@5.3.3))(tailwindcss@3.4.14)
       '@shikijs/markdown-it':
         specifier: ^1.22.0
         version: 1.22.0
@@ -27,8 +27,8 @@ importers:
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.14)
       astro:
-        specifier: ^4.16.6
-        version: 4.16.6(rollup@4.21.2)(typescript@5.3.3)
+        specifier: ^4.16.7
+        version: 4.16.7(rollup@4.21.2)(typescript@5.3.3)
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -744,6 +744,11 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  acorn@8.14.0:
+    resolution: {integrity: sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
   ansi-align@3.0.1:
     resolution: {integrity: sha512-IOfwwBF5iczOjp/WeY4YxyjqAFMQoZufdQWDd19SEExbVLNXqvpzSJ/M7Za4/sCPmQ0+GRquoA7bGcINcxew6w==}
 
@@ -800,8 +805,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@4.16.6:
-    resolution: {integrity: sha512-LMMbjr+4aN26MOyJzTdjM+Y+srpAIkx7IX9IcdF3eHQLGr8PgkioZp+VQExRfioDIyA2HY6ottVg3QccTzJqYA==}
+  astro@4.16.7:
+    resolution: {integrity: sha512-nON+8MUEkWTFwXbS4zsQIq4t0Fs42eulM4x236AL+qNnWfqNAOOqAnFxO1dxfJ1q+XopIBbbT9Mtev+0zH47PQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2037,8 +2042,8 @@ packages:
     resolution: {integrity: sha512-fab7Xg+zELr9KOv4fkaBoe/b3L0GMGLd0IBSCn16GoE/Qx6/OfCr1eGNyEcDU2pUA79qQfZ8kPQWlRuok4YwTw==}
     engines: {node: '>=6'}
 
-  tinyexec@0.3.0:
-    resolution: {integrity: sha512-tVGE0mVJPGb0chKhqmsoosjsS+qUnJVGJpZgsHYQcGoPlG3B51R3PouqTgEGH2Dc9jjFyOqOpix6ZHNMXp1FZg==}
+  tinyexec@0.3.1:
+    resolution: {integrity: sha512-WiCJLEECkO18gwqIp6+hJg0//p23HXp4S+gGtAKu3mI2F2/sXC4FvHvXvB0zJVVaTPhx1/tOwdbRsa1sOBIKqQ==}
 
   to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
@@ -2471,12 +2476,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@2.3.1(astro@4.16.6(rollup@4.21.2)(typescript@5.3.3))':
+  '@astrojs/mdx@2.3.1(astro@4.16.7(rollup@4.21.2)(typescript@5.3.3))':
     dependencies:
       '@astrojs/markdown-remark': 5.1.0
       '@mdx-js/mdx': 3.0.0
       acorn: 8.11.2
-      astro: 4.16.6(rollup@4.21.2)(typescript@5.3.3)
+      astro: 4.16.7(rollup@4.21.2)(typescript@5.3.3)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -2506,9 +2511,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.2(astro@4.16.6(rollup@4.21.2)(typescript@5.3.3))(tailwindcss@3.4.14)':
+  '@astrojs/tailwind@5.1.2(astro@4.16.7(rollup@4.21.2)(typescript@5.3.3))(tailwindcss@3.4.14)':
     dependencies:
-      astro: 4.16.6(rollup@4.21.2)(typescript@5.3.3)
+      astro: 4.16.7(rollup@4.21.2)(typescript@5.3.3)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
@@ -3128,6 +3133,8 @@ snapshots:
 
   acorn@8.12.1: {}
 
+  acorn@8.14.0: {}
+
   ansi-align@3.0.1:
     dependencies:
       string-width: 4.2.3
@@ -3180,7 +3187,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@4.16.6(rollup@4.21.2)(typescript@5.3.3):
+  astro@4.16.7(rollup@4.21.2)(typescript@5.3.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -3193,7 +3200,7 @@ snapshots:
       '@rollup/pluginutils': 5.1.2(rollup@4.21.2)
       '@types/babel__core': 7.20.5
       '@types/cookie': 0.6.0
-      acorn: 8.12.1
+      acorn: 8.14.0
       aria-query: 5.3.2
       axobject-query: 4.1.0
       boxen: 8.0.1
@@ -3232,7 +3239,7 @@ snapshots:
       rehype: 13.0.2
       semver: 7.6.3
       shiki: 1.22.0
-      tinyexec: 0.3.0
+      tinyexec: 0.3.1
       tsconfck: 3.1.4(typescript@5.3.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.3
@@ -4949,7 +4956,7 @@ snapshots:
 
   throttles@1.0.1: {}
 
-  tinyexec@0.3.0: {}
+  tinyexec@0.3.1: {}
 
   to-fast-properties@2.0.0: {}
 
