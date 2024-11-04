@@ -49,8 +49,8 @@ importers:
         specifier: ^13.0.7
         version: 13.0.7
       '@types/prismjs':
-        specifier: ^1.26.4
-        version: 1.26.4
+        specifier: ^1.26.5
+        version: 1.26.5
       prettier:
         specifier: ^3.3.3
         version: 3.3.3
@@ -706,8 +706,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/prismjs@1.26.4':
-    resolution: {integrity: sha512-rlAnzkW2sZOjbqZ743IHUhFcvzaGbqijwOu8QZnZCjfQzBqFE3s4lOTJEsxikImav9uzz/42I+O7YUs1mWgMlg==}
+  '@types/prismjs@1.26.5':
+    resolution: {integrity: sha512-AUZTa7hQ2KY5L7AmtSiqxlhWxb4ina0yd8hNbl4TWuqnv/pFP0nDMb3YrfSBf4hJVGLh2YEIBfKaBW/9UEl6IQ==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -3133,7 +3133,7 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
-  '@types/prismjs@1.26.4': {}
+  '@types/prismjs@1.26.5': {}
 
   '@types/sax@1.2.7':
     dependencies:
