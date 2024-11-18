@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^2.3.1
-        version: 2.3.1(astro@4.16.10(rollup@4.21.2)(typescript@5.3.3))
+        version: 2.3.1(astro@4.16.13(rollup@4.21.2)(typescript@5.3.3))
       '@astrojs/prefetch':
         specifier: ^0.4.1
         version: 0.4.1
@@ -19,7 +19,7 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: ^5.1.2
-        version: 5.1.2(astro@4.16.10(rollup@4.21.2)(typescript@5.3.3))(tailwindcss@3.4.14)
+        version: 5.1.2(astro@4.16.13(rollup@4.21.2)(typescript@5.3.3))(tailwindcss@3.4.14)
       '@shikijs/markdown-it':
         specifier: ^1.22.2
         version: 1.22.2
@@ -27,8 +27,8 @@ importers:
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.14)
       astro:
-        specifier: ^4.16.10
-        version: 4.16.10(rollup@4.21.2)(typescript@5.3.3)
+        specifier: ^4.16.13
+        version: 4.16.13(rollup@4.21.2)(typescript@5.3.3)
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -788,8 +788,8 @@ packages:
   astro-seo@0.8.4:
     resolution: {integrity: sha512-Ou1vzQSXAxa0K8rtNtXNvSpYqOGEgMhh0immMxJeXmbVZac3UKCNWAoXWyOQDFYsZvBugCRSg0N1phBqPMVgCw==}
 
-  astro@4.16.10:
-    resolution: {integrity: sha512-a+nB4bZE50NXHLzVXUHtx/lYct2Aa8kbqZnWNrWqkU97RuhBuWJ5H5/LQbKRnBWGvqChKfJBiMWJe53TY9ieYQ==}
+  astro@4.16.13:
+    resolution: {integrity: sha512-Mtd76+BC0zLWqoXpf9xc731AhdH4MNh5JFHYdLRvSH0Nqn48hA64dPGh/cWsJvh/DZFmC0NTZusM1Qq2gyNaVg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2437,12 +2437,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@2.3.1(astro@4.16.10(rollup@4.21.2)(typescript@5.3.3))':
+  '@astrojs/mdx@2.3.1(astro@4.16.13(rollup@4.21.2)(typescript@5.3.3))':
     dependencies:
       '@astrojs/markdown-remark': 5.1.0
       '@mdx-js/mdx': 3.0.0
       acorn: 8.11.2
-      astro: 4.16.10(rollup@4.21.2)(typescript@5.3.3)
+      astro: 4.16.13(rollup@4.21.2)(typescript@5.3.3)
       es-module-lexer: 1.4.1
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -2472,9 +2472,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.2(astro@4.16.10(rollup@4.21.2)(typescript@5.3.3))(tailwindcss@3.4.14)':
+  '@astrojs/tailwind@5.1.2(astro@4.16.13(rollup@4.21.2)(typescript@5.3.3))(tailwindcss@3.4.14)':
     dependencies:
-      astro: 4.16.10(rollup@4.21.2)(typescript@5.3.3)
+      astro: 4.16.13(rollup@4.21.2)(typescript@5.3.3)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
@@ -3128,7 +3128,7 @@ snapshots:
       - prettier-plugin-astro
       - typescript
 
-  astro@4.16.10(rollup@4.21.2)(typescript@5.3.3):
+  astro@4.16.13(rollup@4.21.2)(typescript@5.3.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
