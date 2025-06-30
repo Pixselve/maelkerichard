@@ -2,6 +2,7 @@
 import { SEO } from "astro-seo";
 import NavbarItem from "../components/NavbarItem.astro";
 import { ViewTransitions } from "astro:transitions";
+import "../styles/global.css";
 
 interface Props {
   title: string;
@@ -85,12 +86,6 @@ const isNavbarItemSelected = (href: string) => {
           href="/projects"
         >
           Projects
-        </NavbarItem>
-        <NavbarItem
-          selected={isNavbarItemSelected("/timeline")}
-          href="/timeline"
-        >
-          Timeline
         </NavbarItem>
         <NavbarItem selected={isNavbarItemSelected("/blog")} href="/blog">
           Blog
