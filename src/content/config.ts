@@ -8,7 +8,10 @@ const timelineCollection = defineCollection({
       title: z.string(),
       start: z.date({ coerce: true }),
       type: z.string(),
-      end: z.date({ coerce: true }).optional(),
+      end: z
+        .date({ coerce: true })
+        .or(z.enum(["present"]))
+        .optional(),
       ranking: z.string().optional(),
     }),
 });

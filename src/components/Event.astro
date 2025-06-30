@@ -1,32 +1,29 @@
 ---
-import { MarkdownInstance } from "astro";
 import { Image } from "astro:assets";
-import { CollectionEntry } from "astro:content";
-
-type FrontMatter = {
-  title: string;
-  start: string;
-  end?: string;
-  logo?: string;
-  type: string;
-  ranking?: string;
-};
+import type { CollectionEntry } from "astro:content";
 
 const { event } = Astro.props as { event: CollectionEntry<"timeline"> };
 const { Content } = await event.render();
 
 const startDate = new Date(event.data.start);
-const endDate = event.data.end ? new Date(event.data.end) : null;
+const endDate = event.data.end
+  ? event.data.end === "present"
+    ? new Date()
+    : new Date(event.data.end)
+  : null;
 
 const start = startDate.toLocaleString("en-US", {
   month: "long",
   year: "numeric",
 });
 
-const end = endDate?.toLocaleString("en-US", {
-  month: "long",
-  year: "numeric",
-});
+const end =
+  event.data.end === "present"
+    ? "Present"
+    : endDate?.toLocaleString("en-US", {
+        month: "long",
+        year: "numeric",
+      });
 
 // Duration in months
 const duration = Math.round(
