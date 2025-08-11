@@ -14,7 +14,7 @@
     "@astrojs/sitemap": "^3.4.1",
     "@shikijs/markdown-it": "^3.9.2",
     "@tailwindcss/typography": "^0.5.16",
-    "astro": "^5.11.0",
+    "astro": "^5.12.9",
     "astro-robots-txt": "^1.0.0",
     "astro-seo": "^0.8.4",
     "markdown-it": "^14.1.0",
