@@ -12,14 +12,14 @@ dependencies:
     specifier: ^3.5.1
     version: 3.5.1
   '@shikijs/markdown-it':
-    specifier: ^3.11.0
-    version: 3.11.0
+    specifier: ^3.12.1
+    version: 3.12.1
   '@tailwindcss/typography':
     specifier: ^0.5.16
     version: 0.5.16(tailwindcss@4.1.12)
   '@tailwindcss/vite':
     specifier: ^4.1.12
-    version: 4.1.12(vite@7.1.3)
+    version: 4.1.12(vite@7.1.4)
   astro:
     specifier: ^5.13.5
     version: 5.13.5(typescript@5.9.2)
@@ -1200,6 +1200,15 @@ packages:
       hast-util-to-html: 9.0.5
     dev: false
 
+  /@shikijs/core@3.12.1:
+    resolution: {integrity: sha512-j9+UDQ6M50xvaSR/e9lg212H0Fqxy3lYd39Q6YITYQxfrb5VYNUKPLZp4PN9f+YmRcdpyNAm3obn/tIZ2WkUWg==}
+    dependencies:
+      '@shikijs/types': 3.12.1
+      '@shikijs/vscode-textmate': 10.0.2
+      '@types/hast': 3.0.4
+      hast-util-to-html: 9.0.5
+    dev: false
+
   /@shikijs/engine-javascript@3.11.0:
     resolution: {integrity: sha512-6/ov6pxrSvew13k9ztIOnSBOytXeKs5kfIR7vbhdtVRg+KPzvp2HctYGeWkqv7V6YIoLicnig/QF3iajqyElZA==}
     dependencies:
@@ -1212,6 +1221,14 @@ packages:
     resolution: {integrity: sha512-Ni3nm4lnKxyKaDoXQQJYEayX052BL7D0ikU5laHp+ynxPpIF1WIwyhzrMU6WDN7AoAfggVR4Xqx3WN+JTS+BvA==}
     dependencies:
       '@shikijs/types': 3.12.0
+      '@shikijs/vscode-textmate': 10.0.2
+      oniguruma-to-es: 4.3.3
+    dev: false
+
+  /@shikijs/engine-javascript@3.12.1:
+    resolution: {integrity: sha512-mwif5T3rEBSMn/1m9dNi4WmB4dxH4VfYqreQMLpbFYov8MM3Gus98I549amFMjtEmYDAkTKGP7bmsv1n9t9I+A==}
+    dependencies:
+      '@shikijs/types': 3.12.1
       '@shikijs/vscode-textmate': 10.0.2
       oniguruma-to-es: 4.3.3
     dev: false
@@ -1230,6 +1247,13 @@ packages:
       '@shikijs/vscode-textmate': 10.0.2
     dev: false
 
+  /@shikijs/engine-oniguruma@3.12.1:
+    resolution: {integrity: sha512-hbYq+XOc55CU7Irkhsgwh8WgQbx2W5IVzHV4l+wZ874olMLSNg5o3F73vo9m4SAhimFyqq/86xnx9h+T30HhhQ==}
+    dependencies:
+      '@shikijs/types': 3.12.1
+      '@shikijs/vscode-textmate': 10.0.2
+    dev: false
+
   /@shikijs/langs@3.11.0:
     resolution: {integrity: sha512-Njg/nFL4HDcf/ObxcK2VeyidIq61EeLmocrwTHGGpOQx0BzrPWM1j55XtKQ1LvvDWH15cjQy7rg96aJ1/l63uw==}
     dependencies:
@@ -1242,8 +1266,14 @@ packages:
       '@shikijs/types': 3.12.0
     dev: false
 
-  /@shikijs/markdown-it@3.11.0:
-    resolution: {integrity: sha512-wRwP3CtBNY4V+6xoifN3l7zRCZr0Ec5PKt1NVHv0icVSFH7OAHgwHHuHSmUOGDtpM+CFHhNaIFLxDH0ta2aqKw==}
+  /@shikijs/langs@3.12.1:
+    resolution: {integrity: sha512-Y1MbMfVO5baRz7Boo7EoD36TmzfUx/I5n8e+wZumx6SlUA81Zj1ZwNJL871iIuSHrdsheV4AxJtHQ9mlooklmg==}
+    dependencies:
+      '@shikijs/types': 3.12.1
+    dev: false
+
+  /@shikijs/markdown-it@3.12.1:
+    resolution: {integrity: sha512-2ww/Z1TyLThsISfVkEaSWw+INON1JbcArM7uTa6GBobyWbrA6xTpHDkXc06EhI//yC8hHLgz3qwGix5n23NuSQ==}
     peerDependencies:
       markdown-it-async: ^2.2.0
     peerDependenciesMeta:
@@ -1251,7 +1281,7 @@ packages:
         optional: true
     dependencies:
       markdown-it: 14.1.0
-      shiki: 3.11.0
+      shiki: 3.12.1
     dev: false
 
   /@shikijs/themes@3.11.0:
@@ -1266,6 +1296,12 @@ packages:
       '@shikijs/types': 3.12.0
     dev: false
 
+  /@shikijs/themes@3.12.1:
+    resolution: {integrity: sha512-9JrAm9cA5hqM/YXymA3oAAZdnCgQf1zyrNDtsnM105nNEoEpux4dyzdoOjc2KawEKj1iUs/WH2ota6Atp7GYkQ==}
+    dependencies:
+      '@shikijs/types': 3.12.1
+    dev: false
+
   /@shikijs/types@3.11.0:
     resolution: {integrity: sha512-RB7IMo2E7NZHyfkqAuaf4CofyY8bPzjWPjJRzn6SEak3b46fIQyG6Vx5fG/obqkfppQ+g8vEsiD7Uc6lqQt32Q==}
     dependencies:
@@ -1275,6 +1311,13 @@ packages:
 
   /@shikijs/types@3.12.0:
     resolution: {integrity: sha512-jsFzm8hCeTINC3OCmTZdhR9DOl/foJWplH2Px0bTi4m8z59fnsueLsweX82oGcjRQ7mfQAluQYKGoH2VzsWY4A==}
+    dependencies:
+      '@shikijs/vscode-textmate': 10.0.2
+      '@types/hast': 3.0.4
+    dev: false
+
+  /@shikijs/types@3.12.1:
+    resolution: {integrity: sha512-Is/p+1vTss22LIsGCJTmGrxu7ZC1iBL9doJFYLaZ4aI8d0VDXb7Mn0kBzhkc7pdsRpmUbQLQ5HXwNpa3H6F8og==}
     dependencies:
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
@@ -1450,7 +1493,7 @@ packages:
       tailwindcss: 4.1.12
     dev: false
 
-  /@tailwindcss/vite@4.1.12(vite@7.1.3):
+  /@tailwindcss/vite@4.1.12(vite@7.1.4):
     resolution: {integrity: sha512-4pt0AMFDx7gzIrAOIYgYP0KCBuKWqyW8ayrdiLEjoJTT4pKTjrzG/e4uzWtTLDziC+66R9wbUqZBccJalSE5vQ==}
     peerDependencies:
       vite: ^5.2.0 || ^6 || ^7
@@ -1458,7 +1501,7 @@ packages:
       '@tailwindcss/node': 4.1.12
       '@tailwindcss/oxide': 4.1.12
       tailwindcss: 4.1.12
-      vite: 7.1.3
+      vite: 7.1.4
     dev: false
 
   /@types/debug@4.1.12:
@@ -4041,6 +4084,19 @@ packages:
       '@types/hast': 3.0.4
     dev: false
 
+  /shiki@3.12.1:
+    resolution: {integrity: sha512-eMlxVaXyuNQAQCaMtDKQjKv0eVm+kA6fsZtv9UqKgspP+7lWCVi7SoN+cJq1dawvIDQY7TI3SixamztotM6R6Q==}
+    dependencies:
+      '@shikijs/core': 3.12.1
+      '@shikijs/engine-javascript': 3.12.1
+      '@shikijs/engine-oniguruma': 3.12.1
+      '@shikijs/langs': 3.12.1
+      '@shikijs/themes': 3.12.1
+      '@shikijs/types': 3.12.1
+      '@shikijs/vscode-textmate': 10.0.2
+      '@types/hast': 3.0.4
+    dev: false
+
   /simple-swizzle@0.2.2:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
     requiresBuild: true
@@ -4511,8 +4567,8 @@ packages:
       fsevents: 2.3.3
     dev: false
 
-  /vite@7.1.3:
-    resolution: {integrity: sha512-OOUi5zjkDxYrKhTV3V7iKsoS37VUM7v40+HuwEmcrsf11Cdx9y3DIr2Px6liIcZFwt3XSRpQvFpL3WVy7ApkGw==}
+  /vite@7.1.4:
+    resolution: {integrity: sha512-X5QFK4SGynAeeIt+A7ZWnApdUyHYm+pzv/8/A57LqSGcI88U6R6ipOs3uCesdc6yl7nl+zNO0t8LmqAdXcQihw==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
