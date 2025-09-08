@@ -16,7 +16,7 @@ dependencies:
     version: 3.12.2
   '@tailwindcss/typography':
     specifier: ^0.5.16
-    version: 0.5.16(tailwindcss@4.1.12)
+    version: 0.5.16(tailwindcss@4.1.13)
   '@tailwindcss/vite':
     specifier: ^4.1.13
     version: 4.1.13(vite@7.1.5)
@@ -36,8 +36,8 @@ dependencies:
     specifier: ^0.34.3
     version: 0.34.3
   tailwindcss:
-    specifier: ^4.1.12
-    version: 4.1.12
+    specifier: ^4.1.13
+    version: 4.1.13
 
 devDependencies:
   '@types/markdown-it':
@@ -1649,7 +1649,7 @@ packages:
       '@tailwindcss/oxide-win32-x64-msvc': 4.1.13
     dev: false
 
-  /@tailwindcss/typography@0.5.16(tailwindcss@4.1.12):
+  /@tailwindcss/typography@0.5.16(tailwindcss@4.1.13):
     resolution: {integrity: sha512-0wDLwCVF5V3x3b1SGXPCDcdsbDHMBe+lkFzBRaHeLvNi+nrrnZ1lA18u+OTWO8iSWU2GxUOCvlXtDuqftc1oiA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders || >=4.0.0-alpha.20 || >=4.0.0-beta.1'
@@ -1658,7 +1658,7 @@ packages:
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       postcss-selector-parser: 6.0.10
-      tailwindcss: 4.1.12
+      tailwindcss: 4.1.13
     dev: false
 
   /@tailwindcss/vite@4.1.13(vite@7.1.5):
@@ -4396,10 +4396,6 @@ packages:
     resolution: {integrity: sha512-KvC8OPjzdNOe+xQ4XWJV2whQA0aM1kGVczMQ8+dStAO6KfEB140JEVQ9dE76ONZ0/Ylf67ni4tILPJB41U0eow==}
     dependencies:
       s.color: 0.0.15
-
-  /tailwindcss@4.1.12:
-    resolution: {integrity: sha512-DzFtxOi+7NsFf7DBtI3BJsynR+0Yp6etH+nRPTbpWnS2pZBaSksv/JGctNwSWzbFjp0vxSqknaUylseZqMDGrA==}
-    dev: false
 
   /tailwindcss@4.1.13:
     resolution: {integrity: sha512-i+zidfmTqtwquj4hMEwdjshYYgMbOrPzb9a0M3ZgNa0JMoZeFC6bxZvO8yr8ozS6ix2SDz0+mvryPeBs2TFE+w==}
