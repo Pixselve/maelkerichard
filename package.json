@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.4",
-    "@astrojs/sitemap": "^3.5.1",
+    "@astrojs/sitemap": "^3.6.0",
     "@shikijs/markdown-it": "^3.12.2",
     "@tailwindcss/typography": "^0.5.16",
     "astro": "^5.13.7",
