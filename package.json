@@ -10,7 +10,7 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.3.9",
+    "@astrojs/mdx": "^4.3.12",
     "@astrojs/sitemap": "^3.5.1",
     "@shikijs/markdown-it": "^3.15.0",
     "@tailwindcss/typography": "^0.5.19",
