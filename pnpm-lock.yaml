@@ -30,8 +30,8 @@ dependencies:
     specifier: ^0.8.4
     version: 0.8.4(prettier-plugin-astro@0.14.1)(prettier@3.8.1)(typescript@5.9.3)
   markdown-it:
-    specifier: ^14.1.0
-    version: 14.1.0
+    specifier: ^14.1.1
+    version: 14.1.1
   sharp:
     specifier: ^0.34.5
     version: 0.34.5
@@ -1354,7 +1354,7 @@ packages:
       markdown-it-async:
         optional: true
     dependencies:
-      markdown-it: 14.1.0
+      markdown-it: 14.1.1
       shiki: 3.22.0
     dev: false
 
@@ -2955,8 +2955,8 @@ packages:
     engines: {node: '>=16'}
     dev: false
 
-  /markdown-it@14.1.0:
-    resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
+  /markdown-it@14.1.1:
+    resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
     hasBin: true
     dependencies:
       argparse: 2.0.1
